@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>MANDATORY ENDORSEMENT AUTO INSURANCE POLICIES </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>GIC - 20</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.19458in</Top>
+        <Left>1.18417in</Left>
+        <Height>0.91666in</Height>
+        <Width>5.69792in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PLEASE READ CAREFULLY THE FOLLOWING INFORMATION AND PLEASE DO NOT HESITATE TO ASK YOUR AGENT ANY QUESTIONS THAT YOU DEEM NECESSARY IN ORDER TO FULLY UNDERSTAND ITS CONTENT. </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>It is hereby understood and agreed that the attached Auto Insurance Policy affords coverage as follows:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Depreciation </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>☐  </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>You have purchased an insurance policy that insures your vehicle for its Actual Cash Value (defined          as Replacement Cost less Depreciation). This means that at the time of loss your claimed loss will be         evaluated on the basis of the cost of new parts, less reasonable depreciation, and less deductible. </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>☐ </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>As our insured, you have the option to purchase a Policy that insures your vehicle for its Replacement       Cost (cost new), at an additional charge. This means that at the time of a loss the depreciation factor         will not be applied when repairing and or replacing damaged parts. However, the depreciation factor        WILL be applied if the vehicle is considered a Total Loss. </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>I acknowledge and confirm, by signing below, that I have read and understood the conditions described above dated ___________________.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>1.40987in</Top>
+        <Left>0.77792in</Left>
+        <Height>5.10417in</Height>
+        <Width>6.66723in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>INSURED</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>7.34042in</Top>
+        <Left>0.77848in</Left>
+        <Height>0.21875in</Height>
+        <Width>1.25in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>WITNESS</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>7.31958in</Top>
+        <Left>3.99667in</Left>
+        <Height>0.23958in</Height>
+        <Width>1.47917in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Top>7.31958in</Top>
+        <Left>0.77792in</Left>
+        <Height>0in</Height>
+        <Width>3.07292in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line3">
+        <Top>7.31958in</Top>
+        <Left>3.99667in</Left>
+        <Height>0in</Height>
+        <Width>3.55208in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+    </ReportItems>
+    <Height>7.55917in</Height>
+    <Style>
+      <Border />
+    </Style>
+  </Body>
+  <Width>8.45708in</Width>
+  <Page>
+    <PageHeader>
+      <Height>0.89944in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="GuardianLogo">
+          <Source>Embedded</Source>
+          <Value>guardianLogo</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.08694in</Top>
+          <Left>0.10083in</Left>
+          <Height>0.8125in</Height>
+          <Width>2.63542in</Width>
+          <ToolTip>GuardianLogo</ToolTip>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="guardianLogo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportID>eef14718-fb45-4f97-a77e-6defd9434ea9</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>

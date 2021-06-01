@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>TaskControl</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TaskControl</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.HtmlExport">
+      <Name>ActiveReports.HtmlExport</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.HtmlExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Interop">
+      <Name>ActiveReports.Interop</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport">
+      <Name>ActiveReports.PdfExport</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.PdfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.RtfExport">
+      <Name>ActiveReports.RtfExport</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.RtfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.TextExport">
+      <Name>ActiveReports.TextExport</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.TextExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.TiffExport">
+      <Name>ActiveReports.TiffExport</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.TiffExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports.Web">
+      <Name>activereports.web</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\activereports.web.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Web.Design">
+      <Name>ActiveReports.Web.Design</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.XlsExport">
+      <Name>ActiveReports.XlsExport</Name>
+      <HintPath>..\..\Program Files\Common Files\Data Dynamics\ActiveReports for .NET\ActiveReports.XlsExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.2.835.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="Audit, Version=1.0.4496.15179, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Customer, Version=1.0.4804.17271, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DBRequest">
+      <Name>DBRequest</Name>
+      <HintPath>..\DBRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="DbRequestXmlCooker">
+      <Name>DbRequestXmlCooker</Name>
+      <HintPath>..\DbRequestXmlCooker.dll</HintPath>
+    </Reference>
+    <Reference Include="Login, Version=1.0.4804.17390, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="LookupTables, Version=1.0.4804.17276, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Quotes, Version=1.0.4804.17393, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalCoverageLiability.cs" />
+    <Compile Include="AditionalCoveragecs.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoGap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoHighLimit.cs" />
+    <Compile Include="Autos.cs" />
+    <Compile Include="Bonds.cs" />
+    <Compile Include="CompulsoryInsuranceQuote.cs" />
+    <Compile Include="CreateXML.cs" />
+    <Compile Include="DeferredPayment.cs" />
+    <Compile Include="DoubleInterest.cs" />
+    <Compile Include="GuardianXtra.cs" />
+    <Compile Include="HomeOwners.cs" />
+    <Compile Include="PaymentCertificationLetter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaymentPolicy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersonalLiability.cs" />
+    <Compile Include="PersonalPackage.cs" />
+    <Compile Include="Policies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Policy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PolicyDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PremiumFinanceWS.cs" />
+    <Compile Include="Properties.cs" />
+    <Compile Include="Quote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuoteAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RoadAssistance.cs" />
+    <Compile Include="TaskControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Umbrella.cs" />
+    <Compile Include="Yacht.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

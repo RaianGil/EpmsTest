@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://ssl.selectpayment.com/PV" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://ssl.selectpayment.com/PV" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://ssl.selectpayment.com/PV">
+      <s:element name="CreateProcessingBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="locationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="terminalNumberIfKnown" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="batchNumberToCreate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="autoCloseDateTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="isAutoCloseDateTimeRequired" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateProcessingBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateProcessingBatchResult" type="tns:WSUpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSUpdateResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="returnValue" type="tns:ReturnValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ReturnValue">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Error_DoesNotExist" />
+          <s:enumeration value="Error_UniqueConstraint" />
+          <s:enumeration value="Error_Unknown" />
+          <s:enumeration value="Recurring_Due" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CloseProcessingBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="batchNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseProcessingBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CloseProcessingBatchResult" type="tns:WSUpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="batchNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBatchResult" type="tns:WSBatch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSBatch">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BatchStatus" type="tns:WSBatchStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClosedDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DebitCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DebitAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeclinedCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VoidCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedByUserId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClosedByUserId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutoCloseDateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WSBatchStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Open" />
+          <s:enumeration value="Closing" />
+          <s:enumeration value="Closed" />
+          <s:enumeration value="Orphaned" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetAllOpenBatches">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllOpenBatchesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllOpenBatchesResult" type="tns:ArrayOfWSBatch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSBatch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSBatch" nillable="true" type="tns:WSBatch" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CloseAllOpenBatches">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseAllOpenBatchesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CloseAllOpenBatchesResult" type="tns:WSUpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAutoCloseDateTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="batchNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="autoCloseDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAutoCloseDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAutoCloseDateTimeResult" type="tns:WSUpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionWithCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customer" type="tns:WSCustomer" />
+            <s:element minOccurs="1" maxOccurs="1" name="createCustomerIfDoesNotExists" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="updateCustomerIfExists" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="transaction" type="tns:WSTransaction" />
+            <s:element minOccurs="1" maxOccurs="1" name="ownerApplication" type="tns:WSOwnerApplication" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSCustomer">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompany" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateRegion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EveningPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EveningExt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DaytimePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DaytimeExt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DLState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DLNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSTransaction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentOrigin" type="tns:WSPaymentOrigin" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountType" type="tns:WSAccountType" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperationType" type="tns:WSOperationType" />
+          <s:element minOccurs="1" maxOccurs="1" name="SettlementType" type="tns:WSSettlementType" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionStatus" type="tns:WSTransactionStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="SettlementStatus" type="tns:WSSettlementStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="EffectiveDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShippingAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConvenienceFeeAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckMICRLine" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckMICRSymbolSet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoutingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SwipeTrack1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SwipeTrack2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SwipeTrack3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardExpiresMonth" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardExpiresYear" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="CVVNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBusinessPayment" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameOnAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAddress1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingAddress2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingStateRegion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingPostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillingPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IpAddressOfOriginator" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DLState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DLNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NotificationMethod" type="tns:WSNotificationMethod" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceFeeType" type="tns:WSFaceFeeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckFrontImageBytes_TiffG4" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckRearImageBytes_TiffG4" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalThirdImageBytes_TiffG4" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalThirdImageDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PresentmentNumber" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WSPaymentOrigin">
+        <s:restriction base="s:string">
+          <s:enumeration value="Internet" />
+          <s:enumeration value="Telephone_IVR" />
+          <s:enumeration value="Telephone_Operator" />
+          <s:enumeration value="Mailed_In" />
+          <s:enumeration value="Drop_Box" />
+          <s:enumeration value="Signature_Faxed" />
+          <s:enumeration value="Signature_Original" />
+          <s:enumeration value="Bounced_Check" />
+          <s:enumeration value="Back_Office" />
+          <s:enumeration value="Retail__POS" />
+          <s:enumeration value="__NONE" />
+          <s:enumeration value="Represented_Check" />
+          <s:enumeration value="Corporate_Trade_Exchange" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSAccountType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Checking" />
+          <s:enumeration value="Savings" />
+          <s:enumeration value="Treasury_Check" />
+          <s:enumeration value="Money_Order" />
+          <s:enumeration value="Travelers_Check" />
+          <s:enumeration value="Convenience_Check" />
+          <s:enumeration value="Visa" />
+          <s:enumeration value="MasterCard" />
+          <s:enumeration value="Discover__Novus" />
+          <s:enumeration value="American_Express" />
+          <s:enumeration value="Diners__Carte_Blanche" />
+          <s:enumeration value="enRoute" />
+          <s:enumeration value="JCB" />
+          <s:enumeration value="Bank_Card" />
+          <s:enumeration value="Gift_Card" />
+          <s:enumeration value="On_Us_Card" />
+          <s:enumeration value="Payroll_Card" />
+          <s:enumeration value="Cashiers_Check" />
+          <s:enumeration value="__NONE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSOperationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Sale" />
+          <s:enumeration value="Auth" />
+          <s:enumeration value="Auth_Only" />
+          <s:enumeration value="Credit" />
+          <s:enumeration value="__NONE" />
+          <s:enumeration value="Refund" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSSettlementType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ACH" />
+          <s:enumeration value="Check_Image" />
+          <s:enumeration value="Card_Transfer" />
+          <s:enumeration value="None" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSTransactionStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Declined" />
+          <s:enumeration value="Approved" />
+          <s:enumeration value="Error" />
+          <s:enumeration value="Voided" />
+          <s:enumeration value="Processed" />
+          <s:enumeration value="Collected" />
+          <s:enumeration value="Awaiting_Capture" />
+          <s:enumeration value="Awaiting_Approval" />
+          <s:enumeration value="Suspended" />
+          <s:enumeration value="In_Collection" />
+          <s:enumeration value="In_Research" />
+          <s:enumeration value="Disputed" />
+          <s:enumeration value="Uncollected_NSF" />
+          <s:enumeration value="Invalid__Closed_Account" />
+          <s:enumeration value="Other_Check21_Returns" />
+          <s:enumeration value="__NONE" />
+          <s:enumeration value="Resolved" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSSettlementStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="No_Settlement_Needed" />
+          <s:enumeration value="To_Be_Originated" />
+          <s:enumeration value="Originating" />
+          <s:enumeration value="Originated_Settlement_Pending" />
+          <s:enumeration value="Settling" />
+          <s:enumeration value="Settled" />
+          <s:enumeration value="Charged_Back" />
+          <s:enumeration value="__NONE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSNotificationMethod">
+        <s:restriction base="s:string">
+          <s:enumeration value="Merchant_Notify" />
+          <s:enumeration value="Merchant_Recording" />
+          <s:enumeration value="Postcard" />
+          <s:enumeration value="Email" />
+          <s:enumeration value="Fax" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSFaceFeeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="__None" />
+          <s:enumeration value="Face" />
+          <s:enumeration value="Bill_Convenience_Face" />
+          <s:enumeration value="Custom1" />
+          <s:enumeration value="Custom2" />
+          <s:enumeration value="Custom3" />
+          <s:enumeration value="NSF_Fee" />
+          <s:enumeration value="Convenience_Fee" />
+          <s:enumeration value="Late_Fee" />
+          <s:enumeration value="Bill_Convenience_Fee" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSOwnerApplication">
+        <s:restriction base="s:string">
+          <s:enumeration value="Web_Service" />
+          <s:enumeration value="RDN" />
+          <s:enumeration value="RDX" />
+          <s:enumeration value="Remit_Plus" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AuthorizeTransactionWithCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeTransactionWithCustomerResult" type="tns:WSResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSResponseMessage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Error" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:AuthResponseCode" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OriginatedAs" type="tns:SettlementType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AuthResponseCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Account_Validated" />
+          <s:enumeration value="Funds_Available" />
+          <s:enumeration value="Duplicate_Transaction" />
+          <s:enumeration value="Declined" />
+          <s:enumeration value="Data_Not_Valid" />
+          <s:enumeration value="NSF" />
+          <s:enumeration value="Uncollected" />
+          <s:enumeration value="Fraud_Multiple" />
+          <s:enumeration value="Fraud_Single" />
+          <s:enumeration value="Stop_Payment" />
+          <s:enumeration value="Non_Participant" />
+          <s:enumeration value="Velocity_Count" />
+          <s:enumeration value="Velocity_Amount" />
+          <s:enumeration value="Law_Prohibits" />
+          <s:enumeration value="Customer_Opt_Out_All" />
+          <s:enumeration value="Customer_Opt_Out_Conversion" />
+          <s:enumeration value="Merchant_Opt_Out_Customer" />
+          <s:enumeration value="AVS_Declined" />
+          <s:enumeration value="CCVS_Declined" />
+          <s:enumeration value="Expired" />
+          <s:enumeration value="Authorizer_Supressed_Data" />
+          <s:enumeration value="Account_Closed" />
+          <s:enumeration value="Account_Invalid" />
+          <s:enumeration value="Account_Not_ACHable" />
+          <s:enumeration value="Account_Holder_Deceased" />
+          <s:enumeration value="Account_Frozen" />
+          <s:enumeration value="Account_Not_DDA" />
+          <s:enumeration value="Account_Invalid_Routing" />
+          <s:enumeration value="Account_New" />
+          <s:enumeration value="Account_Unknown" />
+          <s:enumeration value="Account_No_Debits" />
+          <s:enumeration value="Manager_Approval_Required" />
+          <s:enumeration value="Processor_Approval_Required" />
+          <s:enumeration value="__ERROR_BEGIN" />
+          <s:enumeration value="Error_Invalid_Format" />
+          <s:enumeration value="Error_Timeout" />
+          <s:enumeration value="Error_Internal" />
+          <s:enumeration value="Error_Connection" />
+          <s:enumeration value="Error_Not_Supported" />
+          <s:enumeration value="Error_Not_Subscribed" />
+          <s:enumeration value="Error_Batch_Closed" />
+          <s:enumeration value="Error_Invalid_Batch" />
+          <s:enumeration value="Error_Invalid_Terminal" />
+          <s:enumeration value="Error_Transaction_Not_Found" />
+          <s:enumeration value="Error_Terminal_Disabled" />
+          <s:enumeration value="Error_Invalid_State" />
+          <s:enumeration value="Error_MaxData_Exceeded" />
+          <s:enumeration value="Error_Unspecified" />
+          <s:enumeration value="__NONE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SettlementType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="ACH" />
+          <s:enumeration value="Paper_Draft" />
+          <s:enumeration value="Image_Replacement_Document" />
+          <s:enumeration value="Wire_Transfer" />
+          <s:enumeration value="Card_Transfer" />
+          <s:enumeration value="Image_Exchange" />
+          <s:enumeration value="Online_Payment" />
+          <s:enumeration value="Cash_Payment" />
+          <s:enumeration value="Wallet_Payment" />
+          <s:enumeration value="Third_Party" />
+          <s:enumeration value="__NONE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AuthorizeTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transaction" type="tns:WSTransaction" />
+            <s:element minOccurs="1" maxOccurs="1" name="ownerApplication" type="tns:WSOwnerApplication" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeTransactionResult" type="tns:WSResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="locationId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="originalReferenceNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidTransactionResult" type="tns:WSResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="locationId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="originalReferenceNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefundTransactionResult" type="tns:WSResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaptureTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="locationId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="originalReferenceNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="captureAmount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaptureTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CaptureTransactionResult" type="tns:WSResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeRecurringTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customer" type="tns:WSCustomer" />
+            <s:element minOccurs="1" maxOccurs="1" name="createCustomerIfDoesNotExists" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="updateCustomerIfExists" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="recurringTransaction" type="tns:WSRecurringTransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSRecurringTransaction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecurringPaymentOrigin" type="tns:WSRecurringPaymentOrigin" />
+          <s:element minOccurs="1" maxOccurs="1" name="EffectiveDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoutingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBusinessPayment" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameOnAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IpAddressOfOriginator" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceFeeType" type="tns:WSFaceFeeType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WSRecurringPaymentOrigin">
+        <s:restriction base="s:string">
+          <s:enumeration value="Internet" />
+          <s:enumeration value="Telephone_IVR" />
+          <s:enumeration value="Telephone_Operator" />
+          <s:enumeration value="Signature_Faxed" />
+          <s:enumeration value="Signature_Original" />
+          <s:enumeration value="Corporate_Trade_Exchange" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AuthorizeRecurringTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeRecurringTransactionResult" type="tns:WSResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionWithAddenda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addendaTransaction" type="tns:WSAddendaTransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSAddendaTransaction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentOrigin" type="tns:WSPaymentOrigin" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountType" type="tns:WSAccountType" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperationType" type="tns:WSOperationType" />
+          <s:element minOccurs="1" maxOccurs="1" name="SettlementType" type="tns:WSSettlementType" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionStatus" type="tns:WSTransactionStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="SettlementStatus" type="tns:WSSettlementStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="EffectiveDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoutingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBusinessPayment" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameOnAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IpAddressOfOriginator" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NotificationMethod" type="tns:WSNotificationMethod" />
+          <s:element minOccurs="1" maxOccurs="1" name="FaceFeeType" type="tns:WSFaceFeeType" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnerApplication" type="tns:WSOwnerApplication" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHealthcareClaimPmt" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addenda" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthorizeTransactionWithAddendaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeTransactionWithAddendaResult" type="tns:WSResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionReferenceNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeImages" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionResult" type="tns:WSTransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionByField1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransField1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeImages" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionByField1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionByField1Result" type="tns:ArrayOfWSTransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSTransaction">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSTransaction" nillable="true" type="tns:WSTransaction" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTransactionByTransactionNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeImages" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionByTransactionNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionByTransactionNumberResult" type="tns:WSTransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionWithAddenda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionReferenceNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionWithAddendaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionWithAddendaResult" type="tns:WSAddendaTransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestCredentials">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="entityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="locationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="terminalNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestCredentialsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestCredentialsResult" type="tns:WSUpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConnection">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestConnectionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateProcessingBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateProcessingBatch" />
+  </wsdl:message>
+  <wsdl:message name="CreateProcessingBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateProcessingBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseProcessingBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseProcessingBatch" />
+  </wsdl:message>
+  <wsdl:message name="CloseProcessingBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseProcessingBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBatch" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOpenBatchesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllOpenBatches" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOpenBatchesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllOpenBatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseAllOpenBatchesSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseAllOpenBatches" />
+  </wsdl:message>
+  <wsdl:message name="CloseAllOpenBatchesSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseAllOpenBatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAutoCloseDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAutoCloseDateTime" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAutoCloseDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAutoCloseDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionWithCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionWithCustomer" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionWithCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionWithCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidTransaction" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:RefundTransaction" />
+  </wsdl:message>
+  <wsdl:message name="RefundTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:RefundTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CaptureTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CaptureTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CaptureTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CaptureTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeRecurringTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeRecurringTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeRecurringTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeRecurringTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionWithAddendaSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionWithAddenda" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionWithAddendaSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionWithAddendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionByField1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionByField1" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionByField1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionByField1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionByTransactionNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionByTransactionNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionByTransactionNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionByTransactionNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionWithAddendaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionWithAddenda" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionWithAddendaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionWithAddendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestCredentialsSoapIn">
+    <wsdl:part name="parameters" element="tns:TestCredentials" />
+  </wsdl:message>
+  <wsdl:message name="TestCredentialsSoapOut">
+    <wsdl:part name="parameters" element="tns:TestCredentialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TransactionProcessingSoap">
+    <wsdl:operation name="CreateProcessingBatch">
+      <wsdl:input message="tns:CreateProcessingBatchSoapIn" />
+      <wsdl:output message="tns:CreateProcessingBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseProcessingBatch">
+      <wsdl:input message="tns:CloseProcessingBatchSoapIn" />
+      <wsdl:output message="tns:CloseProcessingBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <wsdl:input message="tns:GetBatchSoapIn" />
+      <wsdl:output message="tns:GetBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOpenBatches">
+      <wsdl:input message="tns:GetAllOpenBatchesSoapIn" />
+      <wsdl:output message="tns:GetAllOpenBatchesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseAllOpenBatches">
+      <wsdl:input message="tns:CloseAllOpenBatchesSoapIn" />
+      <wsdl:output message="tns:CloseAllOpenBatchesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAutoCloseDateTime">
+      <wsdl:input message="tns:UpdateAutoCloseDateTimeSoapIn" />
+      <wsdl:output message="tns:UpdateAutoCloseDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionWithCustomer">
+      <wsdl:input message="tns:AuthorizeTransactionWithCustomerSoapIn" />
+      <wsdl:output message="tns:AuthorizeTransactionWithCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransaction">
+      <wsdl:input message="tns:AuthorizeTransactionSoapIn" />
+      <wsdl:output message="tns:AuthorizeTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <wsdl:input message="tns:VoidTransactionSoapIn" />
+      <wsdl:output message="tns:VoidTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RefundTransaction">
+      <wsdl:input message="tns:RefundTransactionSoapIn" />
+      <wsdl:output message="tns:RefundTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CaptureTransaction">
+      <wsdl:input message="tns:CaptureTransactionSoapIn" />
+      <wsdl:output message="tns:CaptureTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeRecurringTransaction">
+      <wsdl:input message="tns:AuthorizeRecurringTransactionSoapIn" />
+      <wsdl:output message="tns:AuthorizeRecurringTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionWithAddenda">
+      <wsdl:input message="tns:AuthorizeTransactionWithAddendaSoapIn" />
+      <wsdl:output message="tns:AuthorizeTransactionWithAddendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <wsdl:input message="tns:GetTransactionSoapIn" />
+      <wsdl:output message="tns:GetTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByField1">
+      <wsdl:input message="tns:GetTransactionByField1SoapIn" />
+      <wsdl:output message="tns:GetTransactionByField1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByTransactionNumber">
+      <wsdl:input message="tns:GetTransactionByTransactionNumberSoapIn" />
+      <wsdl:output message="tns:GetTransactionByTransactionNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionWithAddenda">
+      <wsdl:input message="tns:GetTransactionWithAddendaSoapIn" />
+      <wsdl:output message="tns:GetTransactionWithAddendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestCredentials">
+      <wsdl:input message="tns:TestCredentialsSoapIn" />
+      <wsdl:output message="tns:TestCredentialsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <wsdl:input message="tns:TestConnectionSoapIn" />
+      <wsdl:output message="tns:TestConnectionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TransactionProcessingSoap" type="tns:TransactionProcessingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateProcessingBatch">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/CreateProcessingBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseProcessingBatch">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/CloseProcessingBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/GetBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOpenBatches">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/GetAllOpenBatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseAllOpenBatches">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/CloseAllOpenBatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAutoCloseDateTime">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/UpdateAutoCloseDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionWithCustomer">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeTransactionWithCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransaction">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/VoidTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefundTransaction">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/RefundTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaptureTransaction">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/CaptureTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeRecurringTransaction">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeRecurringTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionWithAddenda">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeTransactionWithAddenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/GetTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByField1">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/GetTransactionByField1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByTransactionNumber">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/GetTransactionByTransactionNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionWithAddenda">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/GetTransactionWithAddenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestCredentials">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/TestCredentials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="https://ssl.selectpayment.com/PV/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TransactionProcessingSoap12" type="tns:TransactionProcessingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateProcessingBatch">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/CreateProcessingBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseProcessingBatch">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/CloseProcessingBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/GetBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOpenBatches">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/GetAllOpenBatches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseAllOpenBatches">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/CloseAllOpenBatches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAutoCloseDateTime">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/UpdateAutoCloseDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionWithCustomer">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeTransactionWithCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransaction">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/VoidTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefundTransaction">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/RefundTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CaptureTransaction">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/CaptureTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeRecurringTransaction">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeRecurringTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionWithAddenda">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/AuthorizeTransactionWithAddenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/GetTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByField1">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/GetTransactionByField1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByTransactionNumber">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/GetTransactionByTransactionNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionWithAddenda">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/GetTransactionWithAddenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestCredentials">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/TestCredentials" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/PV/TestConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransactionProcessing">
+    <wsdl:port name="TransactionProcessingSoap" binding="tns:TransactionProcessingSoap">
+      <soap:address location="https://ssl.selectpayment.com/PV/TransactionProcessing.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TransactionProcessingSoap12" binding="tns:TransactionProcessingSoap12">
+      <soap12:address location="https://ssl.selectpayment.com/PV/TransactionProcessing.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

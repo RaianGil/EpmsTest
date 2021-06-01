@@ -1,0 +1,266 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using EPolicy.LookupTables;
+using EPolicy.Login;
+
+namespace EPolicy
+{
+	/// <summary>
+	/// Summary description for UserPropertiesList.
+	/// </summary>
+	public partial class UserPropertiesList : System.Web.UI.Page
+	{
+
+		protected void Page_Load(object sender, System.EventArgs e)
+		{
+			Login.Login cp = HttpContext.Current.User as Login.Login;
+			if (cp == null)
+			{
+				Response.Redirect("Default.aspx?001");
+			}
+			else
+			{
+                if (!cp.IsInRole("USER PROPERTIES LIST MAIN MENU") && !cp.IsInRole("ADMINISTRATOR"))
+				{
+					Response.Redirect("Default.aspx?001");
+				}
+			}
+
+			if(!IsPostBack)
+			{
+				DataTable AuthenticatedUser	= LookupTables.LookupTables.GetTable("AuthenticatedUser");	
+
+				FillGrid(AuthenticatedUser);
+			}
+		}
+
+		#region Web Form Designer generated code
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+
+			Control Banner = new Control();
+			Banner = LoadControl(@"TopBannerNew.ascx");
+			this.phTopBanner.Controls.Add(Banner);
+
+			
+		}
+		
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{    
+			this.searchIndividual.ItemCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.searchIndividual_ItemCommand);
+
+		}
+		#endregion
+
+		private void FillGrid(DataTable dt)
+		{
+			searchIndividual.DataSource = null;
+			searchIndividual.CurrentPageIndex = 0;
+					
+			Session.Add("DtLogin",dt);
+
+			if (dt.Rows.Count != 0)
+			{
+				searchIndividual.DataSource = dt;
+				searchIndividual.DataBind();
+			}
+			else
+			{
+				searchIndividual.DataSource = null;
+				searchIndividual.DataBind();
+			}
+
+			LblTotalCases.Text = "Total Users: "+dt.Rows.Count.ToString();	
+		}
+
+		private void searchIndividual_ItemCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
+		{
+			if(e.Item.ItemType.ToString() != "Pager") // Select
+			{
+				int i = int.Parse(e.Item.Cells[1].Text);
+				Login.Login login = Login.Login.GetUser(i);
+	
+				string ToPage;
+
+				if(Session["ToPage"] == null) 
+				{
+					ToPage = "UsersProperties.aspx";
+				}
+				else
+				{
+					ToPage = Session["ToPage"].ToString();
+				}
+	
+				if(Session["Login"] == null)
+					Session.Add("Login",login);
+				else
+					Session["Login"] = login;
+
+				Session.Remove("DtLogin");
+	
+				Response.Redirect(ToPage+"?"+login.UserID);
+			}
+			else  // Pager
+			{
+				searchIndividual.CurrentPageIndex = int.Parse(e.CommandArgument.ToString())-1;
+
+				searchIndividual.DataSource = (DataTable) Session["DtLogin"];
+				searchIndividual.DataBind();
+			}
+		}
+
+		protected void BtnExit_Click(object sender, System.EventArgs e)
+		{
+			Session.Clear();
+			//Response.Redirect("MainMenu.aspx");
+            Response.Redirect("Search.aspx");
+		}
+        protected void btnA_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("A");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnB_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("B");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnC_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("C");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnD_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("D");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnE_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("E");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnF_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("F");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnG_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("G");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnH_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("H");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnI_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("I");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnJ_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("J");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnK_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("K");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnL_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("L");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnM_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("M");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnN_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("N");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnO_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("O");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnP_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("P");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnQ_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("Q");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnR_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("R");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnS_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("S");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnT_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("T");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnU_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("U");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnV_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("V");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnW_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("W");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnX_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("X");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnY_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("Y");
+            FillGrid(AuthenticatedUser);
+        }
+        protected void btnZ_Click(object sender, EventArgs e)
+        {
+            DataTable AuthenticatedUser = LookupTables.LookupTables.GetUsersByLetters("Z");
+            FillGrid(AuthenticatedUser);
+        }
+}
+}

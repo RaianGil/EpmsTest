@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="GetYachtEndorsementB">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>df228a40-b07d-48a5-b41f-273b94a0cf83</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="GetYachtEndorsementB">
+      <Fields>
+        <Field Name="FullName">
+          <DataField>FullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PolicyNo">
+          <DataField>PolicyNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BankDesc">
+          <DataField>BankDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sufijo">
+          <DataField>Sufijo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>GetYachtEndorsementB</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>GetYachtEndorsementB</rd:DataSetName>
+        <rd:SchemaPath>C:\Inetpub\wwwroot\Guardian_ePMS\App_Code\GetYachtEndorsementB.xsd</rd:SchemaPath>
+        <rd:TableName>GetYachtEndorsementB</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>GetYachtEndorsementBTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Image Name="Image2">
+        <Source>Embedded</Source>
+        <Value>guardianLogo</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.24875in</Top>
+        <Left>0.24042in</Left>
+        <Height>0.8875in</Height>
+        <Width>1.98125in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ENDORSEMENT B</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.87792in</Top>
+        <Left>2.75917in</Left>
+        <Height>0.25in</Height>
+        <Width>2.59375in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>NAMED INSURED:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>2.4925in</Top>
+        <Left>0.53833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.33333in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>LOSS PAYEE:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.755in</Top>
+        <Left>0.53833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.33333in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>POLICY NO:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>3.005in</Top>
+        <Left>0.53833in</Left>
+        <Height>0.25in</Height>
+        <Width>1.33333in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>BREACH OF WARRANTY ENDORSEMENT</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>3.54458in</Top>
+        <Left>2.81958in</Left>
+        <Height>0.25in</Height>
+        <Width>3.26666in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>IT IS UNDERSTOOD AND AGREED THAT THE COVERAGE PROVIDED UNDER THIS POLICY WILL NOT BE INVALIDATED AS RESPECT  THE INTERESTS OF THE LOSS PAYEE, FOR LOSSES DUE TO ANY ALLEGED ACT OR NEGLIGENCE  OF THE CONDITIONAL PURCHASER OR THE INSURED PROVIDED:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <HangingIndent>-0.25in</HangingIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>A.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">      </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>ALL PENDING PREMIUMS ARE PAID BY THE LOSS PAYEE IF THE INSURED FAILS TO MAKE ANY PAYMENT.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <HangingIndent>-0.25in</HangingIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>B.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">     </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>THE LOSS PAYEE WILL NOTIFY THE COMPANY OF ANY CHANGE ON THE USE OR OWNERSHIP OF THE INSURED VESSEL, WHICH SHALL COME TO ITS KNOWLEDGE, REQUIRING HIGHER PREMIUMS. IF SO, AN ENDORSEMENT WILL BE ISSUED AND THE LOSS PAYEE WILL BE RESPONSIBLE FOR THE PAYMENT OF THE PREMIUMS.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <HangingIndent>-0.25in</HangingIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>3.91958in</Top>
+        <Left>0.42792in</Left>
+        <Height>1.59375in</Height>
+        <Width>7.29374in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>IT IS WARRANTED THAT CONFISCATION COVERAGE IS PROVIDED SUBJECT TO THE FOLLOWING CONDITIONS:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <ListLevel>1</ListLevel>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <HangingIndent>-0.25in</HangingIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>1.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">      </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>THE INSURED SHALL NOTIFY THE COMPANY OF THE SEIZURE BY THE AUTHORITIES OF THE VESSEL COVERED UNDER THIS POLICY WITHIN TEN (10) DAYS OF THE ACTUAL SEIZURE OR ARREST OF SAID VESSEL BY THE AUTHORITIES.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <HangingIndent>-0.25in</HangingIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>2.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">      </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>THE INSURED SHALL FILE A COMPLIANT OPPOSING THE SEIZURE OR ARREST AND/OR PROCEDURE AND/OR CORRECTNESS OF SAID CONFISCATION , WITHIN FIFTEEN(15) DAYS OF BEING NOTIFIED OF THE CONFISCATION OF THE VESSEL AND FILE WITH THE PROPER AUTHORITIES WHATEVER BOND IS NECESSARY IN ORDER TO TAKE IMMEDIATE POSSESSION OF THE VESSEL.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <HangingIndent>-0.25in</HangingIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>12pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>3.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">      </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>IT IS WARRANTED THAT THIS COVERAGE WILL PROTECT THE LOSS PAYEE ON CLAIMS OR LOSSES OCCURRING WITHIN THE SPECIFIC NAVIGATION LIMITS OF THE POLICY.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0.5in</LeftIndent>
+            <HangingIndent>-0.25in</HangingIndent>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>6.16958in</Top>
+        <Left>0.42792in</Left>
+        <Height>2.25833in</Height>
+        <Width>7.29374in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>CONFISCATION COVERAGE</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>5.69042in</Top>
+        <Left>3.05917in</Left>
+        <Height>0.25in</Height>
+        <Width>2.03125in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>CANCELLATION ENDORSEMENT</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>8.56541in</Top>
+        <Left>2.99667in</Left>
+        <Height>0.25in</Height>
+        <Width>2.3125in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>THIS POLICY CANNOT BE TERMINATED OR CANCELLED BY THE INSURANCE COMPANY UNLESS WE SEND A </Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=IIF(First(Fields!BankDesc.Value, "GetYachtEndorsementB").ToString().Contains("POPULAR"),"SIXTY (60)","THIRTY (30)")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Arial Narrow</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Arial Narrow</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>DAY ADVANCED NOTICE BY CERTIFIED MAIL. IN THE EVENT OF A CANCELLATION  FOR NON PAYMENT OF PREMIUM, A TEN (10) DAY ADVANCED WRITTEN NOTICE SHALL BE SENT.</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>8.98207in</Top>
+        <Left>0.42792in</Left>
+        <Height>0.69792in</Height>
+        <Width>7.36874in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!BankDesc.Value</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.75639in</Top>
+        <Left>1.87583in</Left>
+        <Height>0.23611in</Height>
+        <Width>6in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=IIF(First(Fields!Sufijo.Value, "GetYachtEndorsementB").ToString().Trim()="00","MAR" + First(Fields!PolicyNo.Value, "GetYachtEndorsementB").ToString().Trim(),"MAR" + First(Fields!PolicyNo.Value, "GetYachtEndorsementB").ToString().Trim()+"-"+First(Fields!Sufijo.Value, "GetYachtEndorsementB"))</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>3.00639in</Top>
+        <Left>1.87583in</Left>
+        <Height>0.23611in</Height>
+        <Width>2.775in</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!FullName.Value</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>2.4925in</Top>
+        <Left>1.87166in</Left>
+        <Height>0.25in</Height>
+        <Width>5.66667in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>10.05625in</Height>
+    <Style />
+  </Body>
+  <Width>8.3125in</Width>
+  <Page>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="image001">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAALAAAABDCAYAAAA8sY/pAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAACzVSURBVHhe7V0HYBVV1j6TCmn03iK9SgARFBBwVVAQAUVx7YgodkR31/Lriq6CiusqgoIoFpRVEF13xUqvFkDphJ7QAwktPZn/+868eZm8vJbwKGrOOpvHe1Pu3Pvdc8/5zrn3RpgQKZdTVwOFWWLmHxUDhxQcx3FChJ/zD+PI0O/MvCP4nO76Hr8V2udlipjZ+HcO/uaIUaKl8IURLqYRLRLGI0aMiBgxw+NFcBiRlcSMqCISURWfE/SvRFbH30o44nBUxoHfw2NP3fuX7c5bcVnfMWPGbAl0eUSgE8p/91MDZqFI3iEAME3/Ss4eHLtx7BXJ5XHQAmYegUoAZykQpTAfN8W1ehj6PzHC8BkHAGn9xXeCz/o9f+e/eTgF/zYLxChEp2DnMA/oPQ2WC9/rZz6D/xain/dBkxtRuHUFgJugrmaBOrquSIWGIhUTcTQWiaolRnS9sxHcxWqgHMDB9NACaEKCNHe/mJlQDtk7RLJw5KS6gJomBgBq8jwzDwCyweICpILGBdCwCsCnDVA+3Bsw7UIFMzja4OatCH5PkPNe9n3wV8GMozAX5T8gRjY6HcpsdyZ2GjMCGhna2qzQwAJzbGsx4tqJGdMMoK5vafuzRMoB7NkQ0JYmtWhWskhmshg4JHsbRvLdYlDL0hxwNziH7wgoRwI0HP+h4W2NWQJI/sAYDFCDRYy/exHsBDk1uw11J+AtgBsmRojcA6iHVDEyFgL+6HDhFVUrmxWbi8QniSR0xtFRDGpt/n6G5I8N4IJsAHO7BdIT63CsxQGzKxdaKQ82KuxX1V5GpAuk+OsGqaU9reb3BprSgtKb5vSmiT3uS23vgUHL3HCK/e8gnsEO
+SBND3y1Gb2KZITBVcvajY+8SOfQV7GyMJNDGZty5YlTpLWaVHtDUbfFodpDTJ38oAKutSq16fK2Yx34GWDeqdpUcfE9nSVsLIA1DA3KYpNYpNsR7gjIYkHqChlqO19m2qcs+pc0K7Wc6bFbasqb7cstWtp5ofUmcmr5MBnfR7Cv4l8/GfwpwAjXMBTjb1KEmpXb2NGuscyU8EgdBjaeyvLT5s2BSHZgNMNeCZu4oZrXLRapdIkZMy9OC4t83gAFYMxMa9eiPOAjYNZbtSu+ftiCH/nACFYfBhrGHwtIA1ROgLmCqrYlGpsPGIZmf0fA2nAx0FGo6k88OQ0cJg/kRCWYgLB42KNgE/NskWKjxwS7oOexQ7Fh6Lc0W11FsBCCqYdPazzVh65IJoQNZmAk25JiLDSHTAQYknwyIiyHhiKN2PMqrlAcBjmeEuZ5XzKlk3fFA+Wh28F7QzNTOEt1AzKp/Eql1LbRzT1wPbX2K5PcF4EKYBHSyjq4QOYLj+EoAFhqWLAC0nluzRlaG3nIOdQ4nx2dFl7QV1dMnWPSwvH7ViAQYGs0ATWVGgrqy6avomrAjcdDrpz3J38IBWoJAqa84NVG0nF41a8lv/RkFvl7FNntM1JcQ0G4QA8w0E+ic0g/I3gU7GFoWzitZFoJU31NBzVEKh+2gGhVRbo5YZGYwou15W8z9H4tZuZtI3VtFql9pmV8hlt88gE3SVEdXAbCLRTKWWLYsG4E2m20KkOssYRcGMfzrKdSo+cB/PuiqPAAUf3X8joSGBOAARjMKgKxQz/LQ6bnzrwIVVFRUDQAYdJUXLVQW8IWu/WGQEHBRPFBWr4IKyIdmJS2YsxPm13YoiPWo4w2qGIzcfZb2pmmDkcQgH00bWEcOAJqjwOHvxEyfL1K5u5gN7hWjxkCb0AvJq/wmAaxa4QjMgnRUzpFlqNBkCSPPqiYBhisCxu1MBAKqDSMah9SoqHRQTKZqVTpIbBBoSfCkJoZGiTkH
+IMVBvrRCIwWrAY0u4dYzzywoQ4IJx03wNhEIiOCQWLAPGDD0/TjS5QC8J9ZbvoQev1raGkEXg51VzR2ORNUs1gYgNo8sFbPmYJFGf4PzB4cvBMX97QAYQ5p5ZDlsrK+haZeq82CgIi0tSy0CLeiuEpfD4rWCWG0WXWSDVWAnqvMkqPBIaOuKTS3+E7ynxLbAZzRedB1oU2gqxzAYigYIQRue/lvQPNKAR6IY1a+wnE86c8cwEqZ/LyZHQjrL1MDQxspYRBLIOWLunY5zFokkPi5S73aHoinba5zdAM5L114rh77ESy9ApVigVS3LHk7NoOLLhnVAzLZXGZalhlWvGtolpgm4TQA1rg2Oc9EoTTQipUN/uQRXA2Qz2Nl5wHFTTZyxWMyDn6Pd5mmwR80V2vdUAnkHxdx0L3wUaO4mYy2lUUY56wBsUjNySEr7rxhp8Ghp0yJ/wCgGWn9Olw1aK9qkjgo0LL1pE2FTI6Y16J52SvlIHD7HQMNG1Q7JcFbGNvjdXWYwLA0gK5iP/QKaDc7c/k/EyAIjREaFvkMYtHPqZLCXKSKtpmCEgw9Rhpo4awCsjsKhb9FrZ4lBu5Z5BDAPDL6wasPioC1u2VoMqQkni2CljaaUGHq2GdsKYO0gRsJ5AGwHyzRQFqJIylJxZajrP+QlRnx71D+OusNF9k6DCfEO2A2wHEwkgtlnpM0Rc+3NIm1hWkTXLnUdnVEAKwiPgupCD5W0/6l3G0ZblE6T26b1Zs8W17LKc7rsLakA2wwhTkm4QKTS+TCPYc+6hqhyoJYaH6G7oCIc38ZPi9QcIrLzBRFQbJpJB+VkwMwwN90t0ub9UicPnRkAg1Q3aRvtR687/L3SXgYJfab5FWMPnHrWCVo4bwgDMzhgkmOtlITjQlA1F6G3w44lMxC6qi+/UwhrwAD7YLaeBkajtxjb/m5l7kXBtDs4W8ydL4nR+KlSPe20AZhQZE6sefA/IvvQ044sAQgR9aFXH1Db
+4mo6X7CFNZZFRwC8olEF0R78pfNlaIjzjyMFBQWSlcVcDUuY1h2ByFiFimAIwHlvWL9ekjcnS0QEbH/8Xojz25zbThqfA014hsWgA13nNjA8yHDbeBecuV/QflBeKa/Cbu6H72HuBSmnBcAm2ARhD9sz1QrrMvQIBsAEtWLVPv+PNBYFutP6z7JpEf5UuovRq0owC6peiuNiMZDix7DqH1XTbt68WUY/OEpycrIVuFnZ2dKuXTt58eXxEhMTI5/8+9/y0osvSXw86hl1mZl5Qsa+8ILcNXJkkNA4DafRL2n7kZjrboLjvtrKYyaIWwAnjGYGIacUwBpn3z8TxvsUOGY/WdEwApc5p5bacBTRhiK+g2bW2D21Kl+yWl8cl2tO6qmMqwdRX2fNKZknTsivv/wiWZmZEhkVJcePH5fo6GgpLLQUQThAHY3vo3BQ8nNzJZx5yGeZKP3W6i2RX68GI7ED6ZswLXN+BZXZKaiSnhoAY7g3D3wKmmQiNC6CD9STbvvWmT9lgxZ/yR5wug3t2gpgCqhpawwQg7Ytry2XYjUQHh4u8QkJEhkZqQf/HRcLntURMi82WwzfF2duzp4KVbu42ThlI4wCpLEem3PmAGweniuy6xUQ2N8g6IDQLMK6DBqostUMLZdYuYCWbcs5YNS2TPyoeQ20bT9Ees68rXb2NLH3khCgnod9ZkF+vuTm5UkuNC+Fn23tfDa+l1HjKrQ9wsyH3rMSsaqARg1CQqaBNW1x18tw0D7UDCcDWtOMxO2JXKepAOBa9q0rdY9zsmpcKVL7ehS6txWtCaLg5af4r4Frh14nSZ06QTtbTlxBfoG0bdf2LK42tHq9OwDeL2CwbwaW/oWyWuaPPzlpACsQ90zDA8djZgPi4dS4SBO0bFyHxmU6NpGp9i0cM04YrHMrgHsjnLOu5aAN1FLB/u6yE1q2bi08fktiMDpKDj/7B/hNiMLKgIDFPykAm8cQhCCXl/YlwAmv0ZU/UGRt
+OXQpp+8wn5TphvVBWte5BU5ZSY2Qnp4u27dvl9SU3aCJTsARiZZ69etJ4yZNpFo1F2sR8LXKT/hN1gDzWzjXjgCuEFwSfNkAzPzY1DdFdjyv00oMhmzJ7XloXFW5nP3KVMdIhIPrIZzIYYKzXD1qeN++ffLBe+/JnP99KTt37pQTJzJhsxVgAm+YVKxYURo2aiSXX3GF3DbsNqlZC9NXHHICHnhaGpKoXeYJbb34+ASpVt074DPhuR88cNCdIlxYaEpsXKzUqOE9gYd25ObNm2Tzps2Sfjgd4W1D4uLipBbK0axZM6lbD6OJh9A23b9vv2SD5gpDufiMmNgYqVmzKPeWXO3q1aulfv360uMiBGE8ZPOmTbJu3To5fOiwMgwtWrSQc5Pa62fWiz+hIsjIyHAzD4UoT9WqVSUBjp832b9/v6zHs1JTUrXMFQCgKpWraL03a95M28BT8mFns934l84j35n353NsSdm1S34BW3Jg/wEJCw+T2rVrS4cOHaQW/noVOvARaIdqg/AznXr/UmoAm8jSl61Ihds/w0pg1iCEi1lwe8B00JBix6k7nAJT+waRBg9Y+Qhe5IcffpC/jH5YVq9apdQPK68iCXkrw0ErSBsbv381Z468BK6z03lF91qwYIH89eFHJALeOBv22LFjMvT662XMs894fd6SxUvkoQcfBH8ajkoNl+M4f8DAgfLi+JeKnc9AwWezP5NZn3wia9eukYz0DNiSnG6D+Rxh4RJVIUpq16ot3bp3lxF33imt2hQN2Tk5OfLoX/8mK5Yvk4rgZdnJ/nTppfL6pImyd88eGfvcc/LN19/Izh07ZNgddxQD8MYNG+S1V1+VBfPma8e0ARKfEC9JSR3krrtHSoMGDSTCG4hdmmHa1Ldl0qRJ2tEopNsee+IJuekW5B04ZM2aNfLh+x/I/PnzLfBmI0oKILLTMQhCpqN5i+Zy7dChWqdkPGwh6G+7+Wa8zz6JrhCt9Xj3vffKA6Me
+FN73vXfekblz58ne3bvViWS9ReP6BugUw4bfLrcPH67sSTEhXmKQvtrgTnwNnyqUADYZ9k1+2CKdVevi4Z7MAnUrgw/kcSuBVUh8GDmjcNJ8WLm/QAONGDZcUlJ2qYlAALICCYA8gCUSlUhAU+vwez3/9uEyfcZH0rIVEnUg2SDx9wAUtmY6cuSIHMXhS3g+QWTTT0ePHgU4EWxxyKaNG+WJxx6XeXPBquC5MaCoWA5qd5aDFU+spKSkyNtvvSXfffudTHxjovTo2dO6C845fDhN9u3dq9fyGQQRnzvs1ltl8aLFUqlSJf0txqHdCOpHHnpIdgDY8QAfgxK2dsvPy5eF8xfIqpUr5fJ+/TAljVP6Lc3nKezE+/AsApBCnvgEuGNbGMl7AwB/7ZVXUMZ92slYf3we35HtwIOdeNmSpVreVStXyXPPP6/RPgo784EDBzDS7JUoXMuRbQ/A+vprE2TCv/4l+wBw3o/35f0pvPf2bdugsB7REeIvf/1r8aLTp0IOC8KrgbCrvwetgc3dU8Xc8jcJQ3CCU2gsWswjEEEwU+vSXEh8DObCSAW6L2GlPvnE/0nKrp1S1WXfUtvw++rVq+tQlHYwTQ6lH5YERJQIGn5PG/mZMc/I29Pe0crh97EAAkl7VjrvQXLfl1DzxqJCqbF5LRuTmt+WH1askBHD71DtWKVKVZwTpgDkeQQbQWMHDhjpopZjwz36t0dl1uzZGB5h4gDdCggC1AUKlm/sc8/LimXLdSil2NqVn3/68Se5/557APzDblODvxOM/KsNBtCyA86eNUvfuYQGc70EOyd/57MpGmomKwQhKJ9+8ikFMM+hSUaFwXekz0Ftyn/zmWoSoG1oRrGjtmzZUkbcRe2IV1TzLkbfke9GM+OL//xHy8/Oze/4LAZdONKxrlgudlx+P+HV16Rnz17SpWsXV6mBHy6zRTYqSAkMYCSCm9ufhb07DoWCduT0GQu9rkeQXaDWpZOGCYJVL0PW
+0TMIQLAX+ZcvPv9cli5ZIpWrQJu7OE1W3K3Dhsktt96iNuZuAGPaO9Pk4xkztIIIUFbEf1FRn3/2mVx73XXuBnJyooGeXYJDdVxAu+7QoTTXcGnKEWiKTp07y9XXXAOt3xLvG6ZRsKlo0APQMmyoKlWrCIf+L//3P7nt9mFsXne5qHWovVegYxwDSKqgY7IzUGOl4TkMA/PzM08/jeceksqVUccQgoYg6tm7t3Tq1FHBum7tOlm0aBE6EKhKH9rXfhX7HW0A29/zvtTwzI8goNgZCeThI0bIxRdfrO2RDqXx6cxZ8tWXX6p25Xms/w+nT5erh1xT5FA7uGi7c9jlag97/TzUW3X4Flu3bFHzj+/D92B9UAP/B23YpQsAzOriWhw0IaKRkBWk+ASwlZ6AjC9oXUmdoNO8rSWF8Iu2TZEbZnJmK+c/JT6B+U6PgAP27ig4y0Sgzvxkpr6M5ZCYsKFOyNAbrpdxL77gdlJqwOkZf+65CvCpU6ZoRVKrNIIdxcY+FTLgqqtUQz7+2GM6fA6HjfrUmKehjYtGk27du0kz2IYj7xihjULNyHdhh7wZnc8ZEWMZ+Y7p0Ez8awOzLXIXaMv27NVTG3f50mWq8fiuHJ7pLI559lm58eabVJvbQFy4cKGMgw29ds1ad6i4NPVADTh56lsY6l+TV15+WTXwv/D54j8hOcoh/PeIYbfLt99+qwAn6HZi9GMexgUXIC/FQ/jO5Jt5v1GjH5JBgwdB21qdkfLCuHHyyviX1ZwgetiWtJU5wtC+N5EnrFRauO9R2/OZvjUwwbt5FMD7pgYlJIyneglGMlGHyws1RypcDURSgpTk5GRok7VaKWywfBj5NWrWkJF331PCwyYw7n/gAXUyWrRsAaepmyTBk3V69EE+NujTzodWmPbuuzIHGui6oddrBXtK165dpX7DhpIMtoAAZoOQQaFG8+a183c6cxySH3rkYRk4cBA+kzM35cbrEMhBq9o+QCaG2Hvv
+u09uvwPMjUMIkp6wsyui3m5AuezOE/SLuU5kR3n08cdRny1Vm/bs1avELdhpekEjf/311267nyPFjm3bSwCY5cpDG1aqUllem/i6XOSFVRk4aJC8+/Y7Wj8ctdiuZEuOw8SITwDLwahsQnA5EHZhvQOY2V/J1LyTLRtW1/sqKWYuNGClzmK0nGRN0SmFkCKizWXbaPRSO53XCZRNU693adK0iXz474/cmqgUjyrzqfVAb3FY9SVsNCcTQPARoNlZ2e73sq/luTkwFUgfTQATQebClm1bt0GbrtHOTCEQOAL8+UYEeXwINSJteJ57MjL46qv9Xh4VhZWKHGfQHKKJRfFcqYBloVJp376913vGx8Wr/ct2t4Ud0Apxg27lbBmsL1Ea8Qpgcwcy5lMmQMcjHKz8rkPz2jkM+VhWlEsItX7bWgehlMJGox1oCz83BacaBnrKl9jDaCkfFbLTqS12YAhNxhBKTUtnko0ZBSDZTEB+QaHXnAN9V9Tdo088Xgy8LNy2LVslHfag5u6irmlitGnbFhwsRjYfQrCEemln3pPOKE0EMgUpu1Jk5c8/w6krCirwmXl5Vn6F54DMTkq7OhujB4HqKTrf0UMsU4v44szy0ud0lwCweeATTPl4Du4uV1EhTeZhNvCfXEwEzprR5l3MMi0eVAgWLaRfnELtZTsv/J4NznNoWtDbLVEZ6LVkGujolVy0JNhSBD6Pw90CcKTzvv9eVoK+ohlDmk7Lhc6dUClBPWxbSiwr5vqBWoZsRdu2SAn1EDqCBI/NnJgIeiQ2SizGuQYuadnP2ADn87tvvpUlixdpsObgwYPKEtjOJ7W93VkIN0/7PtgnO13/ktfYCyUGezfrvGIANrFQhWwBL8eewuwwjx6j3iVzfJlYDs1bVvCyYjicenYOJ1AJkrtAZW3bvg1mQ8mwIq9v1ry5vPPeuwGjUqWrkqKzP505U6a8OVlWrVotuYhOKWXnctYIMpsTDsQG2HdkA9J5
+9ZQTCJkXT31EYp7DYSxr+QNdt2P7Dpk4YQKory+Uy2UOcVQ0JtISGHjPU6HlA5WptL+7Aaxz1FKQv4vlMy3ulmyD0/oBeDWXoRESkGEbc+p0GYUNzrCi8/4avMgualwORYz07E7d7bYNnY8jF5qAYYqa2jMsXcZiuS9TnvSpv4P3nII+bEocaDtGBpWPxfPobDZp3FQaNGwgy5ctU0fEFx8bTFmc0S37/DAwEKdSFiJ6OfrBh2TTpo3g2BOU2uN78+BI0TgxUTlfvvOPiJQS0CXk1BYxqNfXUpmMnJHr5Yo3vpLHdVl8nN7sRUznsSJgZRUC2GkjaT0AwBkZjmgYzqE2oGNjOzc0M+zhS7lE1/yvspbD23XsSKR7qJkYSLHJeH7f5/K+0r//lUJ+k8lF7DwDrxygpo7XBg6yYJVBNWkHoLnmsgmPHvUdSQzytj5PY87DfSPvkd17dqsJxnejY3VO43NkwIABchEYiWbNmkvtOrVl+gfTZRFoOzskfbLPDvX1Vrfi+q5YuwpqVe06rw3LIEV9TMDD4myhkAYNsPqNS8NzaKXzRnrGSQvl5uapQ2CHbiuASLeH2kAOTNksKtEw7TtvTVV7nJqRDhUb7+9jxsg11w4ppmmpeZ2OaFnrpUaNmu5QuXZSBIwYoua9T0aze5ZHnSyYb4yApaSmKH3GeiQ11n/AlfIUAink153C+i+rzVvW+ijNdXB7QcMwn5ednzvclIirQz9yYxKuhdVwVMiGa9Ji9hwuNhrBsha8cGpqqiRi+GK07flxYzVHIRK25244T/8cP14B5dmo3sBsrXXmXdSr9uCA7Eb6Fs4MHTcCWG112Kz3I/HnuuuHlriZmkIhmGdGtoF8MDPk+G6krtav36AMRz0vmW4siOZiePJYAVqeo0QqOgaDLbZG5fs1btxY67oWEpM8xe/I4iUsUBrwheLcCDmOpZs4bw3bLlk5ZV5KRYKZMybI04VIWrVuJXXr1lGvnoCKRKMx
+IWcWonOjQfIT3L1Botsy8fXXYY8dhTnh4AldRbVMi6KCsWGZguhLdiH3gja24cissrXTtq1b3eCgBmRAonuPIs7WeU/+TmeytEDyLBfTMWlvpoK2osmiARGEev8L5+rOkRj1vAg7VyGiXqV5Nke5vUguooNsKwEqhHaIdHoDLx/L7LQSTFSIMBCK20QIFs8zuAYsFpcoiV1qX05pR35njUEh074sOCuMUZ7Jb7wJW9YyDWjrTnp9oublXjXoKs3pPQQgzuQUcUwJj4yEh+wl/l+9eg39zY79EwTMWtuC+HvTpkWBEWrWGR9+JP98abwGATwb3+ZgbfODHYPO4naYNozMOWULIonjxo7ToZ7PC2TS+Gssark+ffvKN19ZES/2Rt7zVWR0NYGtfcllmODqEEYxmRSUBXCV9tn5AD3BbwOYf6lEcnJzNJHHFgL7Y9Q7WRgnDxwK0IXyHhEmVhHkEqW0u6xl5T1cSy6JGXc+FsVDjmaI5cabblKNS8+X4KXm4ToHjyLFbvoHH0hN2IYEyEZ4yswjZVKJJ1DYGLTbmKVmp1SyUTn8jrr/ARn6Z4SBYcNuReBkLrhc9ahdC4A4X8e2s+vWq+u2awlwNjBtRibrUFMxSf0bhFZnfPih7EKyNp3R0mhBX1XIZP0pkyfrYiQc3jkC0Xy6B+s4DBw8WDojKYbZZEwYmj3rU9mGQAPNrNIIJwgwyZ8ZdUwgsiYLxCDhfLX84+kxcvNtt2mHWPXzSoB3Buprrr4/RyGvHfRsYCFM5Pbq+rrFMswc1cIwH7dVOgXLwzPadP+oUfIkYvKsTFYeOV86ckxeZ0ILNSXDzZr2qAkuVp6qLQUoH8OzvXr3srS5K7eCf38CWFcsX66zEshpKoeLzwWcLa0RxSJzyf5Es4VZZrYzSSDRrBhx+x0YNWqAKTkih5BkTq3E8lJT6QjiWo+hNIBynsuMrVGjR8vIEXeq1mf5+d7s3G8B2NPeBu+OMjMnmOwMO6Ht
+5AWr/Xn+OViZpy064vx58zQ5iddyBGDdffbZ5/qZOcwM1FBhsM7t/OCi57iQezbYwEYeNrtjJpmKty4F/pfz2E6R3AUb7zAA8RqGS3rDGuNHJerUF5dJTjAdAXBoJxNQBCO/40HgEIt33n03GmW+bEQiOhuG94iNj4OtC1sRDUf77wRWp+H0nVugaZikw1ke9v10pgWEmWGDBl8t7yORx6bROBWIz0zBUEthp2JZmVDE53NIZ+I9y8NcCCauK9jwb17HsmiHCBD+HQRNy/Dtc888qxqSI4d2ahzsqARSXliuJqZf0b+/VKpcSbWxs07cHRvvzGfbuRJaZwA/z70PiVE//fij5u2ynjWfGs86jOw+5dWZVYZ644hI04nmGDsVz2POCn0RCpOQOOmA96ZSsdvFV4eykras83mvQOcHAznQaCxGcW3keaFOHTpFwsZ98um/Swvk2VILbABHyfxbolLxS9sYGu58JD33R6NNmjgJAQ5oCNpyjlwKetJvTJksTz3xJPJul7sjXrwLE9Jr1qwl11w3BMnYd6nXTTOAoKLH71wvgbb0c2OfB2giAY7Zqm3VsNLyWNw0tVh/8KWcFkOgP/fsPxQIPEfzJXbs1LlkVPDqbOEDD4Ld3qfIV3Xe/+ADUr9BfXToV3WOWi5YAvfzcX/ytsPvHAFH9xGZ/elsmTHj3wryQt2iq0j4HPvZVhvTtrZ+v6jnRTIBGWPPYlIA8x7sYJDNqjAK2As5yMNH3CENkW13NbLIaDpZkVJTHUwLpFBurogkn6/Ps0rr9fWs9mR9uA5XfZyMJRJhYs0x3cDO61pUrirRDf9OrVyHOVd9L79cOBuCyeJ7Mc0lP9/KburQsRPmjHWHbRiP4a+dgtOKkMUVy5/o0LGjzJj5sSxClImTJTncc10EBh2Y+mhPQWLPf37sWKTxHVdNQCA7JxlSg7+C/Nihf75Bli1bak1IRONRI5M96YjykOSnMGOs8/nnaxiWUlCQjzlk
+LfW+5FUZnGGuBBuO8+g4CTSQMEOMpgzpLlKLnIsXEREOWz9RuoERaeWaSnXZZZfJp5gBouYVzKLKsMftoM8NKFf3Hj3UbCLoCvILdXKmLf2uvFKT9GnnboaPkZMDUwhmC/2JpA5Jau/bdTNl6lQdcfgeVBq00QnWmjB7Jr45Cdo5RyOr/I0jKP0Fb0Jn+3XMAsnKydIRkefTvqb5VFaJMOLaI3z8OWxcmhHejBr0XeytdjK9JNjC0SG6FI3Cw5ewUfwJ7cY+6Ag8fAmHxvPOx/TtANL1gq7Cw5/QJOHhTQiEsgo7UT+MODx8SR3QkDy8CTstD3+iKZs3/NnvORwhPRkY+wICvKuXxHZfN+RUpS4B6rO09RVhVO6JGcbIQFMF4gWmXBYKm3dwuhBXlCwXqwbyoWnpSJWLlTkYyohhaeo0Qqr0wiLRcJgYrDCY9eURwcKONObxNWJwrwOuxXuWC+eyff3N95gx0EXOQUTPl5Cem4cZvqSnWmGWR2ZmlswBD9sGU+NbYqqQL2HC0ULMSUsGM0GHqAum97fGNf4icj8hp3bPnr3St08ftbnJT/+8crX06XOpDvvehDbm4sVLZeu2rbqmBIXl7Nz5vIB5F3TyvpzzlYLq8r59vM4OcT5zJbLt1sOh7YuRr3oN0pF7ZdHixXLJJX+Sao41HjzLSVNu/vyFkoz3oaPZFX5K27ZtfNKKNNXmL1iozjDfTwNF0Mr9+/crZgqWBmIRutFJVcyFQj6EoetoMbfVYUpw7zNuZrf3Xey6iEWlS3P3M3BuZma2LgbSCk6hP2GW1Zo16zRQ0giOCiuTDEZtzij2I0uQffYzppcTGFvBxX6N0DPn7dWqVbRgiefltOc3g9+9DOtCUA5jcZR169ZLLzhT4h2/eh7vfxBOZFcwAZz/xw5GJ7ITbH1/ws65Ch0kHHZzRzAliYnF8xs8r2Uy0ooVPyoIh2DCJpmUdes3SrduWBbBhxCA3343VxPee1zUA5Nv
+EUX99DO1f+v7CH/zGtYDE+KT2idZo5hrKlZZoYIxEJBsMAqrAmLTQADVYNTNU8ABmwdmIXyGGcBVLynrs07LddSEtIMDZYfRo64BbcOFn5dhmjs1Nq8jHeYX+GhcUnNMhGnf/lzJQFg2Nsb/FqpRYDY4h80Od7NsMTGcYe1bHeh0JQCwIZKeemAOIDvYJiSbpyK9NBCAt2zZhsyyxuo4bsFsj0AApilUt25daNKtOjrQVmWww9+ocgTZa5yQ2R1l6w3qkdp1c/IWXf7At+Cd4H/Uw7N69vTvywQLFqu1quBmDe/DypIfWLsDcZOVYloYp3Hm8ZZHxUzCDovYluq3LvSiaQJ0u/BCWYLZwEwgCgR6vnP3Cy/QPIs3p7wlDeG8XXxxb6ncxI8aLWNFUVtZk0R3ycyZnwoneZJRaB1gwT4GPjjd6TyYGgxGMCkokI2aB7anLlgV5jl/P3c+3qlXwCQlhuV5X5uNYd21DjDqEVM0odZihNyJfJSIiEi55upBJzU5t8h1SwQ445JE1mNNA9JmunGzbUrgLzcV5GJ+G7EwHzfpCGLqfBnb7jRdZs2ibQm7kqsCfT93npL3gcLC1Ly33XqzbIC5sXTpCvlg+kcydOgQaYHZIb6EncVK4remHnFoV962ROZf8TsoiAEMakKaN5chJ6IZsvj8CU2Nw6Ddjh87rkM0TRAGLHyt+2bfixr0QlCN7yVPl+UrEG6P5MpDvkNtYZp2yzlwvrP+SpbTmnZP9qNjxyTl1UsbDve8Z9F4yc3nag1BdiU08ObRSIvgBiycZOcEMfg97L5obhghRgtM+tR10c4+UWAEEea0gUUtOnnKVOWXnfPbvL0ZHR4GJLjQSOPEc2T8P19BTkSKXwBXwJCcfiRDZzdUBT128ECaNp6/1YMIeGt2ci0ZPHigzgTh3LUL4SgxxOtLdkBjM+dhI2Z9sx54D5odfgGMumJEjZG9Hj26ycefzIJT5T/Hg5QnOVxGIem4McNt
+wcJFci7WIOZo5l24zl0BqD8s8JcEZUl0uTpyIMXh631LGnxc+pR7WGBunDpvqmkdi/dxTTRM/DQxK1mavYIlUrFF61kkBCXDnoESzXX2LM5jA9MB69LlfJkz52tr8T4/Qg//e5D/mxDBykNYlENn82belwKwb0Nmg8B///3psJ2ramIRHTNfDIR9HcO2diiY5XsDmWE/wmmi2eNNqEV//XWNRhqHXDNY2Yv3MaPiF3xHe92XTUsTIhfZaARXOwCQZd2GDDxGD31JLMLrFwHsZDuOHMHacgAwgx0dMFvFv2B9u19+1UULqY0jEADpBxaCQZGySAkAq1tRH2tfYddEkwv5cVNt7qrIneBdYUJ19LCVgPnrADHPeVqM2iDDfczkKEuhTuYaJqL373cFggv+5+zVqVNH+oJJsIcwgiIuNk5Dp/6EDhXtxfUbNqkT1rvXRQGvYTTx5ptukNVoODbyVZj94I9usp9/gSOFsyHCy0MQoaMN6Us4mnfqfAHWU27kjshdelkfrAiU5k7I8XZtO2jQRkiq5/uQemP9bcOSAZV8LMVq34OUHkPodC7rYw3nJICXWYG+hB2oe/cLEZ5HzgVGCfYPfncyyyX4drmxZ4GBfYRNLKVqpn2OAQ+nIuldt3AlkLn7ePYemBPDxeRm3A1H66oqZ5pmi0d4mXxkIKmOtEIetpAVIBMRjDBHl0dphEP4peBVSyOtEba2hUMs7UZ/Eh0VIV06IfEKu5+aqZtU6TSujnsk8r18NzVzO5zCEckfLeg8twU4cx7BCDtHmxCvGu+fM4rFQnZtP8T+tu9KIfa/ME5ssjYUtDcVpGPHKUn7PoJGnmfN2qgLJ9DLyuvBvGD5OWWogfzDovuTZGBjlKOYlIuwv4lJCLqPHinPMHbSM61WyvBeQV4SOBbKzQTrYXmlan2w1NQbuokLF7k2sBy8iY247a0FdMo9dicyue8x1wOuNRQrVGL9CCTLl0uIagArhUruPkRGN2DB
+39UALJbix74kJlbAN6KQj5HQAfV+vYRVgsYt44IzISrpabtNYAC7imJwPYimz2NvC6zXtfd9K7CRtc2yfbmzEPc34MH1gwl0rOBuxmOJ1ZoDdL1Xayr+71cThLrFTG7NkLsbk9KwIj5GPmEo/9ha/HsnaE4shBJZGys5woHGtg1UFEZsCxf1GeqSnN33CxrA7teIRay76VgxqZVJqR34DNoA/DDpN2prgNggvUbTIh2OXvp3cAjrisntBZg4xL3gYFsHswTr2V11oSmd7vKUi2W2eGD4lxPYYioTGpZbTWWl4nvs/cGVQaMTUYeo+5pXIfzcRcIIWG6/+weX0gPY1sicoYxp9iY3bcnArOa0/4qZMR8Vn4zdFjMs0wG2soFcCt0r4+AX1sFVfwBgicdwp0eSmNENAPqy0Si/ifaDNtVhHkvRmjkpYmRBi1KTcgTTA1oWpgFCZ9YghUUVJQb1W72vLhRuxoOawpzEMHtv6d/ES5+eQpYZwHbxDIadsUolDyMPsxe4mTcWSTE525naBKtuI/5iLY5NKo7rDvMc/K7/jgAlV6GemGggnTjKvXNprnDNYWqYUzAXL+RVy5nb3EYM5hOnaFkadb+1YHMOMq8IVpoC+E5HKlLNoLxMEjpckbFCorUBTkISHGCsTs56oIJAJiCl3PDy3WInDeBit+bsDmzKrRtzw6kzT2xEGuZPAPXPGBqRkknNwwWxaV7YzQIv2jiGYfLoKnxHYhBAR6cwowDsyJpYLAgJ21y+Fby0RMEUgXNC88MEpWeEI8jCDkRWxIDGDwUXrdw9EEYbVHcThb3JPZxdh8EVijisE4h5COYArKYCk5/RgdGJ6Qewz7qjgapVkekXiUy3BDi2sQh8VIQZBTPArNgMS+Kis0Z4n8UQ8s72O7thaAHsrByGplWrnAcWg5gA3ZOVAiDDEeEqmHRMsrdjuUbMtWKDEyz0snXv5BxoMgDCTHZP7FS8E6DUSuE4wIDAEASQQeVh
+RSH9NxdHVmeSmgtLBXCyKu1HgttTuNcdNWchOhM3GufqQ9Ci+nzusKQ7LWFyJgGr4MW/OXoUsHyWBnWPQiwbtSmyukwGfeLgsGqnawCAJgKs4FmpUaPqINsPtJYjj6Rcu55cjzp1APYsF0wFIx5alfacS0xqsty9ulmi2oIYZnUfOg7B0GQGQC/5AA/BTWBBrRn5ABIOw8BvrkinDQJ34BNfBAQGT3akebBIxe6D31z5KrpXBUcGkyMDt8ilHU8g0lkFKOmk8jD0N44c+I3mD0wk3pOPCViek2vHP+zVpw/AXqpY2QoecUWLPmtDMxeHu3tyIW3SctSAeRkAL4fuDM1b1t+4JRPO03NVS2IhQGpOaFVDAe9F8VIbc/4fZ5+otkYur5oh0OSRMEm4Omc4ElkIVn4mIKkxuckNz4XGt0wXZuuVFG9ALQfvqetf/w827ii85DFXkAAAAABJRU5ErkJggg==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="guardianLogo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportID>684412db-e1c0-4c41-9ffa-9972c1d18f8e</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>

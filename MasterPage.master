@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Guardian Insurance | claim next</title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/LogoGuardian.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Images/LogoGuardian.ico" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        javascript: window.history.forward(1);
+    </script>
+    <style type="text/css">
+        .style2
+        {
+            width: 191px;
+            height: 89px;
+        }
+        .style3
+        {
+            width: 268px;
+        }
+        .style5
+        {
+            width: 187px;
+            height: 76px;
+        }
+        .style6
+        {
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <div class="page">
+                <div class="header">
+                    <div class="title">
+                    </div>
+                    <div class="loginDisplay">
+                        <br />
+                        <table style="width: 98%;">
+                            <tr>
+                                <td align="left" valign="middle" class="style3">
+                                    <img alt="" class="style2" src="Images2/guardianLogo.png" />
+                                </td>
+                                <td align="right" rowspan="2" class="style6" valign="bottom">
+
+                                    <asp:Label ID="lblUsername" runat="server" Font-Names="Helvetica" 
+                                        Font-Size="10pt" ForeColor="Black" Text="USER:"></asp:Label>
+
+                                </td>
+                                <td align="right" valign="middle">
+                                    <img alt="" class="style5" 
+                                        src="Images/ClaimNextLogo.png" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="hideSkiplink">
+                     
+                        </asp:Menu>
+                    </div>
+                </div>
+                <div class="main">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="clear" style="text-align: center; background-color: #CCCCCC;">
+                    <strong>Guardian Insurance Company<br />
+                        #</strong>644 Ave. Fernandez Juncos Suite 202<br /> San Juan, P.R.&nbsp; 00907<br />
+                    Telephone: 787.520.6175 - Fax: 787.520.6176<br />
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    </form>
+</body>
+</html>

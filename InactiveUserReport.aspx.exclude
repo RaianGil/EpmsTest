@@ -1,0 +1,152 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="InactiveUserReport.aspx.cs" Inherits="EPolicy.InactiveUserReport" %>
+
+<%@ Register TagPrefix="MaskedInput" Namespace="MaskedInput" Assembly="MaskedInput" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>ePMS | electronic Policy Manager Solution</title>
+    <link href="baldrich.css" rel="stylesheet" type="text/css" />
+</head>
+<body background="Images2/SQUARE.GIF">
+    <form id="form1" runat="server">
+    <div>
+        <div>
+            <table id="Table8" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0"
+                datapagesize="25" style="z-index: 124; left: 4px; width: 914px; position: static;
+                top: 4px; height: 409px" width="914">
+                <tr>
+                    <td colspan="3" style="width: 764px; height: 1px">
+                        <p>
+                            <asp:PlaceHolder ID="Placeholder1" runat="server"></asp:PlaceHolder>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="1" rowspan="5" style="font-size: 10pt; width: 5px; position: static;
+                        height: 395px" valign="top">
+                        <p align="center">
+                            <asp:PlaceHolder ID="phTopBanner1" runat="server"></asp:PlaceHolder>
+                        </p>
+                    </td>
+                    <td align="center" style="font-size: 0pt; width: 86px; height: 184px">
+                        <p align="center">
+                            <table id="Table9" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="width: 811px;
+                                height: 414px" width="811">
+                                <tr>
+                                    <td align="center" style="font-size: 0pt; width: 6px; height: 3px">
+                                    </td>
+                                    <td align="right" colspan="3" style="font-size: 0pt; height: 3px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-size: 0pt; width: 6px; height: 1px">
+                                        <table id="Table10" border="0" cellpadding="0" cellspacing="0" style="width: 808px;
+                                            height: 12px" width="808">
+                                            <tr>
+                                                <td align="left">
+                                                    &nbsp;
+                                                    <asp:Label ID="Label8" runat="server" CssClass="headForm1 " Font-Bold="True" Font-Names="Tahoma"
+                                                        Font-Size="11pt" ForeColor="Navy" Height="16px" Width="198px">Inactive Users Report</asp:Label></td>
+                                                <td>
+                                                </td>
+                                                <td align="right">
+                                                    <asp:Button ID="btnPrint" runat="server" BackColor="MidnightBlue" BorderColor="MidnightBlue"
+                                                        BorderWidth="0px" Font-Names="Tahoma" Font-Size="9pt" ForeColor="White" Height="23px"
+                                                        OnClick="btnPrint_Click" TabIndex="44" Text="Print" Width="64px" />
+                                                    <asp:Button ID="BtnExit" runat="server" BackColor="MidnightBlue" BorderColor="MidnightBlue"
+                                                        BorderWidth="0px" Font-Names="Tahoma" ForeColor="White" Height="23px" OnClick="BtnExit_Click"
+                                                        TabIndex="45" Text="Exit" Width="61px" />&nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 0pt; height: 5px">
+                                        <table id="Table11" bgcolor="indigo" border="0" bordercolor="#4b0082" bordercolordark="#4b0082"
+                                            bordercolorlight="#4b0082" cellpadding="0" cellspacing="0" height="1" style="width: 808px"
+                                            width="808">
+                                            <tr>
+                                                <td>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" colspan="1" style="font-size: 10pt; width: 112px; height: 3px">
+                                        &nbsp;<asp:Label ID="LblTotalCases" runat="server" CssClass="headform3" Font-Names="Tahoma"
+                                            Font-Size="9pt" Height="9px" Width="141px">Report Filter</asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 0pt; width: 35px; height: 3px">
+                                        <table id="Table2" bgcolor="indigo" border="0" bordercolor="#4b0082" bordercolordark="#4b0082"
+                                            bordercolorlight="#4b0082" cellpadding="0" cellspacing="0" height="1" style="width: 808px"
+                                            width="808">
+                                            <tr>
+                                                <td>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="font-size: 0pt; width: 35px; height: 27px">
+                                        <table id="Table4" border="0" cellpadding="0" cellspacing="0" onclick="return Table4_onclick()"
+                                            style="width: 806px; height: 32px" width="806">
+                                            <tr>
+                                                <td align="center" style="font-size: 1pt">
+                                                    <table id="Table3" border="0" cellpadding="0" cellspacing="0" style="width: 371px;
+                                                        height: 99px" width="371">
+                                                        <tr>
+                                                            <td style="width: 87px">
+                                                                <asp:Label ID="LblLineOfBusiness" runat="server" CssClass="HeadField1" Font-Names="Tahoma"
+                                                                    Font-Size="9pt" Width="94px">Company Dealer</asp:Label></td>
+                                                            <td>
+                                                                &nbsp;
+                                                                <asp:DropDownList ID="ddlCompanyDealer" runat="server" CssClass="HeadField1" Font-Names="Tahoma"
+                                                                    Font-Size="9pt" Height="19px" TabIndex="2" Width="230px">
+                                                                </asp:DropDownList></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 87px; height: 20px">
+                                                                </td>
+                                                            <td style="height: 20px">
+                                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="font-size: 0pt; width: 35px; height: 12px">
+                                        <p align="center">
+                                            &nbsp;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 0pt; width: 35px; height: 84px">
+                                        <p>
+                                            &nbsp;</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                    </td>
+                </tr>
+            </table>
+            <asp:Literal ID="litPopUp" runat="server" Visible="False"></asp:Literal>
+            <maskedinput:maskedtextheader id="MaskedTextHeader1" runat="server"></maskedinput:maskedtextheader>
+            &nbsp;
+        </div>
+    
+    </div>
+    </form>
+</body>
+</html>

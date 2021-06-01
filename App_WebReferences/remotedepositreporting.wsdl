@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://ssl.selectpayment.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="https://ssl.selectpayment.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://ssl.selectpayment.com/">
+      <s:element name="GetBatchByBatchNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBatchByBatchNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBatchByBatchNumberResult" type="tns:WSRemoteDepositBatch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSRemoteDepositBatch">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BatchStatus" type="tns:WSBatchStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentStatusDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACHItemCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACHTotalAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="C21ItemCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="C21TotalAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedByUserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NeedsAttention" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="NeedsRescan" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepositSlipAuxOnUs" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WSBatchStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Open" />
+          <s:enumeration value="Closed" />
+          <s:enumeration value="Error" />
+          <s:enumeration value="ReadyForProcessing" />
+          <s:enumeration value="Rejected" />
+          <s:enumeration value="Deleted" />
+          <s:enumeration value="SentToTransactionProcessing" />
+          <s:enumeration value="TPError" />
+          <s:enumeration value="NeedsBalancing" />
+          <s:enumeration value="PartiallyProcessed" />
+          <s:enumeration value="TPBatchCreationFailed" />
+          <s:enumeration value="PartialDeposit" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetBatchesByDateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationIds" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="BatchStatus" type="tns:ArrayOfWSBatchStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWSBatchStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSBatchStatus" type="tns:WSBatchStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBatchesByDateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBatchesByDateRangeResult" type="tns:ArrayOfWSRemoteDepositBatch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSRemoteDepositBatch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSRemoteDepositBatch" nillable="true" type="tns:WSRemoteDepositBatch" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBatchEventsByBatchNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBatchEventsByBatchNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBatchEventsByBatchNumberResult" type="tns:ArrayOfWSBatchEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSBatchEvent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSBatchEvent" nillable="true" type="tns:WSBatchEvent" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSBatchEvent">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventType" type="tns:WSBatchEventType" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WSBatchEventType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Opened" />
+          <s:enumeration value="Closed" />
+          <s:enumeration value="Error" />
+          <s:enumeration value="ReadyForProcessing" />
+          <s:enumeration value="Rejected" />
+          <s:enumeration value="Deleted" />
+          <s:enumeration value="SentToTransactionProcessing" />
+          <s:enumeration value="TPError" />
+          <s:enumeration value="NeedsBalancing" />
+          <s:enumeration value="PartiallyProcessed" />
+          <s:enumeration value="TPBatchCreationFailed" />
+          <s:enumeration value="PartialDeposit" />
+          <s:enumeration value="NeedsRescan" />
+          <s:enumeration value="NeedsNoRescan" />
+          <s:enumeration value="NeedsAttention" />
+          <s:enumeration value="NeedsNoAttention" />
+          <s:enumeration value="Adjustment" />
+          <s:enumeration value="ProcessedWithAdjustment" />
+          <s:enumeration value="Updated" />
+          <s:enumeration value="Duplicate_Items_In_Batch" />
+          <s:enumeration value="Rejected_Items_In_Batch" />
+          <s:enumeration value="SecondLook" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetBatchEventsByDateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationIds" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="BatchEventType" type="tns:ArrayOfWSBatchEventType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSBatchEventType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSBatchEventType" type="tns:WSBatchEventType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBatchEventsByDateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBatchEventsByDateRangeResult" type="tns:ArrayOfWSBatchEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemByItemId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="IncludeImages" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemByItemIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemByItemIdResult" type="tns:WSRemoteDepositItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSRemoteDepositItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemDateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentOrigin" type="tns:WSPaymentOrigin" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemStatus" type="tns:WSItemStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDuplicate" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameOnAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Field3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Deleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualOriginatedAsID" type="tns:WSSettlementType" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecoStatus" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountSource" type="tns:WSAmountSource" />
+          <s:element minOccurs="1" maxOccurs="1" name="IQUStatus" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImageQualityPass" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MICRSource" type="tns:WSMICRSource" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthResponseCode" type="tns:WSAuthResponseCode" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentType" type="tns:WSPaymentType" />
+          <s:element minOccurs="1" maxOccurs="1" name="SettlementType" type="tns:WSSettlementType" />
+          <s:element minOccurs="1" maxOccurs="1" name="RescanCount" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="SequenceNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoutingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MICR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrontImage" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="RearImage" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WSPaymentOrigin">
+        <s:restriction base="s:string">
+          <s:enumeration value="__NONE" />
+          <s:enumeration value="Mailed_In" />
+          <s:enumeration value="Back_Office" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSItemStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Created" />
+          <s:enumeration value="Closed" />
+          <s:enumeration value="Approved" />
+          <s:enumeration value="Error" />
+          <s:enumeration value="Released" />
+          <s:enumeration value="Rejected" />
+          <s:enumeration value="Resolved" />
+          <s:enumeration value="Deleted" />
+          <s:enumeration value="SentToTransactionProcessing" />
+          <s:enumeration value="TPError" />
+          <s:enumeration value="NeedsRescan" />
+          <s:enumeration value="NeedsAttention" />
+          <s:enumeration value="Rescanned" />
+          <s:enumeration value="CheckDecisioningError" />
+          <s:enumeration value="None" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSSettlementType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="ACH" />
+          <s:enumeration value="Image_Replacement_Document" />
+          <s:enumeration value="__NONE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSAmountSource">
+        <s:restriction base="s:string">
+          <s:enumeration value="MICR" />
+          <s:enumeration value="CAR" />
+          <s:enumeration value="APEXKeyed" />
+          <s:enumeration value="Customer" />
+          <s:enumeration value="Keyed" />
+          <s:enumeration value="None" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSMICRSource">
+        <s:restriction base="s:string">
+          <s:enumeration value="Document" />
+          <s:enumeration value="CAR" />
+          <s:enumeration value="APEXKeyed" />
+          <s:enumeration value="OrbographRepaired" />
+          <s:enumeration value="MICRRepair" />
+          <s:enumeration value="None" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSAuthResponseCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Duplicate_Transaction" />
+          <s:enumeration value="Declined" />
+          <s:enumeration value="Data_Not_Valid" />
+          <s:enumeration value="Velocity_Count" />
+          <s:enumeration value="Velocity_Amount" />
+          <s:enumeration value="Customer_Opt_Out_Conversion" />
+          <s:enumeration value="Account_Not_ACHable" />
+          <s:enumeration value="Account_Invalid_Routing" />
+          <s:enumeration value="Error_Invalid_Format" />
+          <s:enumeration value="Error_Timeout" />
+          <s:enumeration value="Error_Internal" />
+          <s:enumeration value="Error_Connection" />
+          <s:enumeration value="Error_Not_Supported" />
+          <s:enumeration value="Error_Not_Subscribed" />
+          <s:enumeration value="Error_Batch_Closed" />
+          <s:enumeration value="Error_Invalid_Batch" />
+          <s:enumeration value="Error_Invalid_Terminal" />
+          <s:enumeration value="Error_Transaction_Not_Found" />
+          <s:enumeration value="Error_Terminal_Disabled" />
+          <s:enumeration value="Error_Invalid_State" />
+          <s:enumeration value="Error_MaxData_Exceeded" />
+          <s:enumeration value="Error_Unspecified" />
+          <s:enumeration value="__NONE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="WSPaymentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="__NONE" />
+          <s:enumeration value="Checking" />
+          <s:enumeration value="Savings" />
+          <s:enumeration value="Money_Order" />
+          <s:enumeration value="Travelers_Check" />
+          <s:enumeration value="Convenience_Check" />
+          <s:enumeration value="Cashiers_Check" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetItemsByBatchNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemStatus" type="tns:ArrayOfWSItemStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSItemStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSItemStatus" type="tns:WSItemStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemsByBatchNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemsByBatchNumberResult" type="tns:ArrayOfWSRemoteDepositItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSRemoteDepositItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSRemoteDepositItem" nillable="true" type="tns:WSRemoteDepositItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemsByDateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationIds" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:ArrayOfWSItemStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemsByDateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemsByDateRangeResult" type="tns:ArrayOfWSRemoteDepositItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemEventsByItemId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemEventsByItemIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemEventsByItemIdResult" type="tns:ArrayOfWSItemEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSItemEvent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSItemEvent" nillable="true" type="tns:WSItemEvent" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSItemEvent">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventType" type="tns:WSItemEventType" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WSItemEventType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Created" />
+          <s:enumeration value="Error" />
+          <s:enumeration value="Rejected" />
+          <s:enumeration value="Resolved" />
+          <s:enumeration value="Deleted" />
+          <s:enumeration value="SentToTransactionProcessing" />
+          <s:enumeration value="TPError" />
+          <s:enumeration value="NeedsRescan" />
+          <s:enumeration value="NeedsAttention" />
+          <s:enumeration value="Rescan" />
+          <s:enumeration value="CheckDecisioningError" />
+          <s:enumeration value="CheckDecisionPerformed" />
+          <s:enumeration value="CARReco" />
+          <s:enumeration value="MICRReco" />
+          <s:enumeration value="IQUA" />
+          <s:enumeration value="MICRRepair" />
+          <s:enumeration value="MICRRepairFailed" />
+          <s:enumeration value="RemoteKeyed" />
+          <s:enumeration value="CARRecoFailed" />
+          <s:enumeration value="MICRRecoFailed" />
+          <s:enumeration value="Updated" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetItemEventsByDateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StoreId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationIds" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemEventType" type="tns:ArrayOfWSItemEventType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWSItemEventType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WSItemEventType" type="tns:WSItemEventType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetItemEventsByDateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemEventsByDateRangeResult" type="tns:ArrayOfWSItemEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBatchByBatchNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBatchByBatchNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchByBatchNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBatchByBatchNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchesByDateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBatchesByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchesByDateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBatchesByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchEventsByBatchNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBatchEventsByBatchNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchEventsByBatchNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBatchEventsByBatchNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchEventsByDateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBatchEventsByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchEventsByDateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBatchEventsByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemByItemIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemByItemId" />
+  </wsdl:message>
+  <wsdl:message name="GetItemByItemIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemByItemIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsByBatchNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemsByBatchNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsByBatchNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemsByBatchNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsByDateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemsByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsByDateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemsByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemEventsByItemIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemEventsByItemId" />
+  </wsdl:message>
+  <wsdl:message name="GetItemEventsByItemIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemEventsByItemIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemEventsByDateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemEventsByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="GetItemEventsByDateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemEventsByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RemoteDepositReportingSoap">
+    <wsdl:operation name="GetBatchByBatchNumber">
+      <wsdl:input message="tns:GetBatchByBatchNumberSoapIn" />
+      <wsdl:output message="tns:GetBatchByBatchNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchesByDateRange">
+      <wsdl:input message="tns:GetBatchesByDateRangeSoapIn" />
+      <wsdl:output message="tns:GetBatchesByDateRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchEventsByBatchNumber">
+      <wsdl:input message="tns:GetBatchEventsByBatchNumberSoapIn" />
+      <wsdl:output message="tns:GetBatchEventsByBatchNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchEventsByDateRange">
+      <wsdl:input message="tns:GetBatchEventsByDateRangeSoapIn" />
+      <wsdl:output message="tns:GetBatchEventsByDateRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemByItemId">
+      <wsdl:input message="tns:GetItemByItemIdSoapIn" />
+      <wsdl:output message="tns:GetItemByItemIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByBatchNumber">
+      <wsdl:input message="tns:GetItemsByBatchNumberSoapIn" />
+      <wsdl:output message="tns:GetItemsByBatchNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByDateRange">
+      <wsdl:input message="tns:GetItemsByDateRangeSoapIn" />
+      <wsdl:output message="tns:GetItemsByDateRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemEventsByItemId">
+      <wsdl:input message="tns:GetItemEventsByItemIdSoapIn" />
+      <wsdl:output message="tns:GetItemEventsByItemIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemEventsByDateRange">
+      <wsdl:input message="tns:GetItemEventsByDateRangeSoapIn" />
+      <wsdl:output message="tns:GetItemEventsByDateRangeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RemoteDepositReportingSoap" type="tns:RemoteDepositReportingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBatchByBatchNumber">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetBatchByBatchNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchesByDateRange">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetBatchesByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchEventsByBatchNumber">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetBatchEventsByBatchNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchEventsByDateRange">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetBatchEventsByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemByItemId">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetItemByItemId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByBatchNumber">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetItemsByBatchNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByDateRange">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetItemsByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemEventsByItemId">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetItemEventsByItemId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemEventsByDateRange">
+      <soap:operation soapAction="https://ssl.selectpayment.com/GetItemEventsByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RemoteDepositReportingSoap12" type="tns:RemoteDepositReportingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBatchByBatchNumber">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetBatchByBatchNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchesByDateRange">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetBatchesByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchEventsByBatchNumber">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetBatchEventsByBatchNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchEventsByDateRange">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetBatchEventsByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemByItemId">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetItemByItemId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByBatchNumber">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetItemsByBatchNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsByDateRange">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetItemsByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemEventsByItemId">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetItemEventsByItemId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemEventsByDateRange">
+      <soap12:operation soapAction="https://ssl.selectpayment.com/GetItemEventsByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RemoteDepositReporting">
+    <wsdl:port name="RemoteDepositReportingSoap" binding="tns:RemoteDepositReportingSoap">
+      <soap:address location="https://ssl.selectpayment.com/rdwsreporting/remotedepositreporting.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RemoteDepositReportingSoap12" binding="tns:RemoteDepositReportingSoap12">
+      <soap12:address location="https://ssl.selectpayment.com/rdwsreporting/remotedepositreporting.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

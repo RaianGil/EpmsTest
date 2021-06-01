@@ -1,0 +1,1274 @@
+Time: 11/03/2020 02:54:40 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3613
+   at EPolicy.Bonds.PrintBondsPolicy() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3236
+Source: App_Web_ii3rnsdw
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 11/03/2020 02:58:24 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3613
+   at EPolicy.Bonds.PrintBondsPolicy() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3236
+Source: App_Web_ii3rnsdw
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 11/03/2020 03:07:57 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3613
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3363
+Source: App_Web_ii3rnsdw
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 11/03/2020 03:54:31 PM
+-----------------------------------------------------------
+Message: The remote procedure call failed. (Exception from HRESULT: 0x800706BE)
+StackTrace:    at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3629
+Source: Microsoft.Office.Interop.Word
+TargetSite: Microsoft.Office.Interop.Word.Document Open(System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef)
+-----------------------------------------------------------
+Line of error: 4
+Time: 11/03/2020 03:54:31 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3652
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3388
+Source: App_Web_wvh0ok3r
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 12/03/2020 08:51:46 AM
+-----------------------------------------------------------
+Message: The remote procedure call failed. (Exception from HRESULT: 0x800706BE)
+StackTrace:    at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3629
+Source: Microsoft.Office.Interop.Word
+TargetSite: Microsoft.Office.Interop.Word.Document Open(System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef)
+-----------------------------------------------------------
+Line of error: 4
+Time: 12/03/2020 08:51:46 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3652
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3448
+Source: App_Web_4uksls2b
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 12/03/2020 03:47:56 PM
+-----------------------------------------------------------
+Message: The remote procedure call failed. (Exception from HRESULT: 0x800706BE)
+StackTrace:    at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3629
+Source: Microsoft.Office.Interop.Word
+TargetSite: Microsoft.Office.Interop.Word.Document Open(System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef)
+-----------------------------------------------------------
+Line of error: 4
+Time: 12/03/2020 03:47:56 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3652
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3491
+Source: App_Web_ms1tlixb
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 12/03/2020 04:06:56 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_cyn2wjk3
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 5
+Time: 12/03/2020 04:06:56 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3491
+Source: App_Web_cyn2wjk3
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 12/03/2020 04:15:22 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_cyn2wjk3
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 5
+Time: 12/03/2020 04:15:22 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3491
+Source: App_Web_cyn2wjk3
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 08:46:02 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_cyn2wjk3
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 5
+Time: 13/03/2020 08:46:02 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3491
+Source: App_Web_cyn2wjk3
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 09:55:21 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_qtpc1d3p
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 5
+Time: 13/03/2020 09:55:21 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3491
+Source: App_Web_qtpc1d3p
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 09:56:16 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_qtpc1d3p
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 5
+Time: 13/03/2020 09:56:16 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3491
+Source: App_Web_qtpc1d3p
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 02:18:34 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_qtpc1d3p
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 5
+Time: 13/03/2020 02:18:34 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3491
+Source: App_Web_qtpc1d3p
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 02:20:24 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_gc1a3pre
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 6
+Time: 13/03/2020 02:20:24 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3490
+Source: App_Web_gc1a3pre
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 02:35:45 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3641
+Source: App_Web_lgnfximc
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 9
+Time: 13/03/2020 02:35:45 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3490
+Source: App_Web_lgnfximc
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 02:52:41 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_mu5yetdp
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 6
+Time: 13/03/2020 02:52:41 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3490
+Source: App_Web_mu5yetdp
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 02:55:09 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_mu5yetdp
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 6
+Time: 13/03/2020 02:55:09 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3490
+Source: App_Web_mu5yetdp
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 13/03/2020 03:34:49 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: App_Web_mu5yetdp
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+Line of error: 6
+Time: 13/03/2020 03:34:49 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3653
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3490
+Source: App_Web_mu5yetdp
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 16/03/2020 10:30:24 AM
+-----------------------------------------------------------
+Message: The remote procedure call failed. (Exception from HRESULT: 0x800706BE)
+StackTrace:    at Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3634
+Source: Microsoft.Office.Interop.Word
+TargetSite: Microsoft.Office.Interop.Word.Document Open(System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef, System.Object ByRef)
+-----------------------------------------------------------
+Line of error: 4
+Time: 16/03/2020 10:30:24 AM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3664
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3469
+Source: App_Web_usanlcpf
+TargetSite: Void PrintBondsMSWord(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String], System.Collections.Generic.List`1[System.String], System.String)
+-----------------------------------------------------------
+
+Time: 16/03/2020 11:17:15 AM
+-----------------------------------------------------------
+Message: Free version limitation has been exceeded (Free version is limited to 20 paragraphs). To control what happens when your application reaches free version limit use ComponentInfo.FreeLimitReached event.
+StackTrace:    at ​ . (    )
+   at ​ .(    )
+   at ​ .(    , Func`1 , String , Func`2 )
+   at ​ .​    (    , String )
+   at   ..(    )
+   at    .(    , Action`1 )
+   at    .(Stream , Action`1 )
+   at   ..(Stream )
+   at   .(String , Action`1 )
+   at   .(String , Action`1 )
+   at   .()
+   at   .(Stream , String , DocxLoadOptions )
+   at GemBox.Document.DocxLoadOptions.7k4lmxmhj5tk8h83eglk6fss34tasuhn   (Stream , String )
+   at GemBox.Document.DocumentModel.Load(String path, LoadOptions options)
+   at GemBox.Document.DocumentModel.Load(String path)
+   at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3682
+Source: GemBox.Document
+TargetSite: Boolean  (   )
+-----------------------------------------------------------
+
+Time: 16/03/2020 11:17:16 AM
+-----------------------------------------------------------
+Message: Free version limitation has been exceeded (Free version is limited to 20 paragraphs). To control what happens when your application reaches free version limit use ComponentInfo.FreeLimitReached event.
+StackTrace:    at ​ . (    )
+   at ​ .(    )
+   at ​ .(    , Func`1 , String , Func`2 )
+   at ​ .​    (    , String )
+   at   ..(    )
+   at    .(    , Action`1 )
+   at    .(Stream , Action`1 )
+   at   ..(Stream )
+   at   .(String , Action`1 )
+   at   .(String , Action`1 )
+   at   .()
+   at   .(Stream , String , DocxLoadOptions )
+   at GemBox.Document.DocxLoadOptions.7k4lmxmhj5tk8h83eglk6fss34tasuhn   (Stream , String )
+   at GemBox.Document.DocumentModel.Load(String path, LoadOptions options)
+   at GemBox.Document.DocumentModel.Load(String path)
+   at EPolicy.Bonds.PrintBondsMSWord(String reportName, Dictionary`2 bookmarks, List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3682
+Source: GemBox.Document
+TargetSite: Boolean  (   )
+-----------------------------------------------------------
+
+Time: 16/03/2020 11:17:16 AM
+-----------------------------------------------------------
+Message: The document has no pages.
+StackTrace:    at OPTIMAIns.CreatePDFBatch.MergePDFFiles(List`1 mergePaths, String ProcessedPath, String CustomerName) in f:\inetpub\wwwroot\EpmsTest\App_Code\Class\CreatePDFBatch.cs:line 231
+   at EPolicy.Bonds.PrintBondsPDFMerge(List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3705
+   at EPolicy.Bonds.PrintBondsQuote() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3605
+Source: App_Code.yu_dyhs8
+TargetSite: System.String MergePDFFiles(System.Collections.Generic.List`1[System.String], System.String, System.String)
+-----------------------------------------------------------
+
+Time: 16/03/2020 03:49:20 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1833
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1392
+Source: App_Web_lnv0dwnh
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 16/03/2020 04:10:01 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1833
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1392
+Source: App_Web_t5kjsrg0
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 16/03/2020 04:16:23 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1586
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 16/03/2020 04:16:31 PM
+-----------------------------------------------------------
+Message: The INSERT statement conflicted with the CHECK constraint "SSMA_CC$PolicyCvrg$ReinsAsl$disallow_zero_length". The conflict occurred in database "AgentTestData", table "dbo.PolicyCvrg", column 'ReinsAsl'.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at EPolicy.Bonds.SendPolicyToPPS(Int32 TaskControlID) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 5963
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1431
+Source: .Net SqlClient Data Provider
+TargetSite: Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+-----------------------------------------------------------
+
+Time: 16/03/2020 04:19:21 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1586
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 16/03/2020 04:19:24 PM
+-----------------------------------------------------------
+Message: The INSERT statement conflicted with the CHECK constraint "SSMA_CC$PolicyCvrg$ReinsAsl$disallow_zero_length". The conflict occurred in database "AgentTestData", table "dbo.PolicyCvrg", column 'ReinsAsl'.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at EPolicy.Bonds.SendPolicyToPPS(Int32 TaskControlID) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 5963
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1431
+Source: .Net SqlClient Data Provider
+TargetSite: Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+-----------------------------------------------------------
+
+Time: 17/03/2020 11:33:39 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 17/03/2020 11:33:42 AM
+-----------------------------------------------------------
+Message: Effective Date must be equal or greater than today.
+ Expiration Date is wrong please select Effective Date again.
+ 
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_mjsz1lul
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 17/03/2020 11:44:35 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:38:46 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:39:00 PM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:39:29 PM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:39:30 PM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:39:47 PM
+-----------------------------------------------------------
+Message: You must select a $25,000.00 or $50,000.00 penalty for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:40:16 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:43:09 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:43:23 PM
+-----------------------------------------------------------
+Message: You must select a $25,000.00 or $50,000.00 penalty for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:43:40 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:45:54 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:45:58 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:46:10 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:46:24 PM
+-----------------------------------------------------------
+Message: You must select a $25,000.00 or $50,000.00 penalty for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1864
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1398
+Source: App_Web_prxw0qhu
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:46:37 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:49:25 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 04:51:52 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 05:43:18 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 05:47:31 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 05:50:28 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 05:53:13 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/04/2020 05:56:21 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1584
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 14/05/2020 12:16:47 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 28/05/2020 04:32:56 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1863
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1397
+Source: App_Web_ibncdj1s
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 28/05/2020 04:33:27 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 28/05/2020 04:39:34 PM
+-----------------------------------------------------------
+Message: You must select a $25,000.00 or $50,000.00 penalty for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1863
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1397
+Source: App_Web_ibncdj1s
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 28/05/2020 04:39:37 PM
+-----------------------------------------------------------
+Message: You must select a $25,000.00 or $50,000.00 penalty for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1863
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1397
+Source: App_Web_ibncdj1s
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 28/05/2020 04:39:51 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/05/2020 08:17:01 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/05/2020 08:23:20 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/05/2020 08:28:18 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/05/2020 08:31:37 AM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1863
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1397
+Source: App_Web_ibncdj1s
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 29/05/2020 08:32:03 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/05/2020 08:56:22 AM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1863
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1397
+Source: App_Web_ibncdj1s
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 29/05/2020 08:58:02 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/05/2020 09:03:53 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1583
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/06/2020 11:20:49 AM
+-----------------------------------------------------------
+Message: The document has no pages.
+StackTrace:    at OPTIMAIns.CreatePDFBatch.MergePDFFiles(List`1 mergePaths, String ProcessedPath, String CustomerName) in f:\inetpub\wwwroot\EpmsTest\App_Code\Class\CreatePDFBatch.cs:line 231
+   at EPolicy.Bonds.PrintBondsPDFMerge(List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3734
+   at EPolicy.Bonds.PrintBondsPolicy() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3393
+Source: App_Code.zceisfqf
+TargetSite: System.String MergePDFFiles(System.Collections.Generic.List`1[System.String], System.String, System.String)
+-----------------------------------------------------------
+
+Time: 10/06/2020 11:20:55 AM
+-----------------------------------------------------------
+Message: The document has no pages.
+StackTrace:    at OPTIMAIns.CreatePDFBatch.MergePDFFiles(List`1 mergePaths, String ProcessedPath, String CustomerName) in f:\inetpub\wwwroot\EpmsTest\App_Code\Class\CreatePDFBatch.cs:line 231
+   at EPolicy.Bonds.PrintBondsPDFMerge(List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3734
+   at EPolicy.Bonds.PrintBondsPolicy() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3393
+Source: App_Code.zceisfqf
+TargetSite: System.String MergePDFFiles(System.Collections.Generic.List`1[System.String], System.String, System.String)
+-----------------------------------------------------------
+
+Time: 10/06/2020 11:24:36 AM
+-----------------------------------------------------------
+Message: The document has no pages.
+StackTrace:    at OPTIMAIns.CreatePDFBatch.MergePDFFiles(List`1 mergePaths, String ProcessedPath, String CustomerName) in f:\inetpub\wwwroot\EpmsTest\App_Code\Class\CreatePDFBatch.cs:line 231
+   at EPolicy.Bonds.PrintBondsPDFMerge(List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3734
+   at EPolicy.Bonds.PrintBondsPolicy() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3393
+Source: App_Code.zceisfqf
+TargetSite: System.String MergePDFFiles(System.Collections.Generic.List`1[System.String], System.String, System.String)
+-----------------------------------------------------------
+
+Time: 12/06/2020 08:12:53 AM
+-----------------------------------------------------------
+Message: The document has no pages.
+StackTrace:    at OPTIMAIns.CreatePDFBatch.MergePDFFiles(List`1 mergePaths, String ProcessedPath, String CustomerName) in f:\inetpub\wwwroot\EpmsTest\App_Code\Class\CreatePDFBatch.cs:line 231
+   at EPolicy.Bonds.PrintBondsPDFMerge(List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3734
+   at EPolicy.Bonds.PrintBondsPolicy() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3393
+Source: App_Code.zceisfqf
+TargetSite: System.String MergePDFFiles(System.Collections.Generic.List`1[System.String], System.String, System.String)
+-----------------------------------------------------------
+
+Time: 12/06/2020 08:15:17 AM
+-----------------------------------------------------------
+Message: You must select a $25,000.00 or $50,000.00 penalty for this obligee.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_qustgqce
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 12/06/2020 08:48:58 AM
+-----------------------------------------------------------
+Message: The document has no pages.
+StackTrace:    at OPTIMAIns.CreatePDFBatch.MergePDFFiles(List`1 mergePaths, String ProcessedPath, String CustomerName) in f:\inetpub\wwwroot\EpmsTest\App_Code\Class\CreatePDFBatch.cs:line 231
+   at EPolicy.Bonds.PrintBondsPDFMerge(List`1 mergePaths, String ProcessedPath) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3783
+   at EPolicy.Bonds.PrintBondsPolicy() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 3442
+Source: App_Code.zceisfqf
+TargetSite: System.String MergePDFFiles(System.Collections.Generic.List`1[System.String], System.String, System.String)
+-----------------------------------------------------------
+
+Time: 02/07/2020 09:08:35 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 14/07/2020 04:00:34 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_vrqbi43o
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 14/07/2020 04:01:01 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 14/07/2020 06:21:27 PM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_vrqbi43o
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 14/07/2020 06:21:45 PM
+-----------------------------------------------------------
+Message: State is missing.
+ State is missing.
+ 
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_vrqbi43o
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 14/07/2020 06:22:13 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 14/07/2020 06:31:20 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 14/07/2020 06:31:25 PM
+-----------------------------------------------------------
+Message: Agent missing or wrong.
+StackTrace:    at EPolicy.TaskControl.Policy.ValidatePolicy()
+   at EPolicy.TaskControl.Bonds.SaveBonds(Int32 UserID)
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1410
+Source: TaskControl
+TargetSite: Void ValidatePolicy()
+-----------------------------------------------------------
+
+Time: 14/07/2020 06:32:04 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 14/07/2020 06:32:06 PM
+-----------------------------------------------------------
+Message: Agent missing or wrong.
+StackTrace:    at EPolicy.TaskControl.Policy.ValidatePolicy()
+   at EPolicy.TaskControl.Bonds.SaveBonds(Int32 UserID)
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1410
+Source: TaskControl
+TargetSite: Void ValidatePolicy()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:20:45 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:25:05 AM
+-----------------------------------------------------------
+Message: You must enter a company name for this type of bond.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_vrqbi43o
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:25:50 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:38:24 AM
+-----------------------------------------------------------
+Message: You must select a signature
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_vrqbi43o
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:38:34 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:45:02 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:45:02 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:50:32 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:50:44 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:50:44 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:50:45 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:55:02 AM
+-----------------------------------------------------------
+Message: You must select a signature
+StackTrace:    at EPolicy.Bonds.ValidateFields() in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_vrqbi43o
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:55:34 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 10:59:14 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 15/07/2020 11:03:22 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 23/09/2020 12:33:05 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in f:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+

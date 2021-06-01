@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="EPolicy.Mail" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Class\Mail.cs</FileName>
+      <HashCode>AIQAAAEAAAAAAAEAAAAAAAAAEAAAgAAYEAAQABBAAQE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPolicy.ExtendedRadioButton" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Class\Utilities.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPolicy.Utilities" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Class\Utilities.cs</FileName>
+      <HashCode>AAAIAEECAAQAQAAAAAAAAAAAAAADACKIAAAIgQAABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPolicy.Global" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Global.asax.cs</FileName>
+      <HashCode>AAAAAAAAAAAAACAAAAEAAAACAAAAAUCIBQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="EPolicy.AddressFields" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Class\Utilities.cs</FileName>
+      <HashCode>gEAAAAAAAAAwAIAAIFAAACAABgCAlIIACBAQgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EPolicy.ReportFields" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Class\Utilities.cs</FileName>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAACACBAAAAAAAAAEBAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="EPolicy.BasePolicySubType" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Migrated\QuoteAutoVehicles_aspx_cs_BasePolicySubType.cs</FileName>
+      <HashCode>CAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAg=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

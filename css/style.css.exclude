@@ -1,0 +1,71 @@
+.watermarkRequired
+{
+ color:Gray;
+ background:#FFF080;
+ font-style:italic;   
+}
+.watermarkNotRequired
+{
+ background:#FAFAFA;
+ font-style:italic;
+ color:Gray;   
+}
+
+
+/* CUSTOM */
+.menu2{
+ border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-color: #064662;
+    background-color:#036893;
+    color: #E2E2E2;
+    text-decoration: none;
+}
+
+.totalsAuto
+{
+    background: #F2F2F2;
+    text-align:center;
+}
+
+.totalsAutoLeft
+{
+    background: #F2F2F2;
+    text-align:left;
+}
+
+.divider
+{
+ background: #fcbf1f;
+ color:White;    
+}
+.divider2
+{
+ background:#fcdf94;
+ color:White; 
+}
+.lineDivider
+{
+ background: #FAFAFA;   
+}
+.mediumTB
+{
+ width:60%;   
+}
+.smallTB
+{
+ width:15%;   
+}
+.largeTB
+{
+ width:90%;   
+}
+.midSmallTB
+{
+ width: 45%;   
+}
+.totalTile
+{
+ background-color:#068FC9;
+ color:White;   
+}

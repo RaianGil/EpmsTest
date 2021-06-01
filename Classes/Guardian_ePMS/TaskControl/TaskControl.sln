@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskControl", "TaskControl.csproj", "{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = TaskControl.csproj
+		SccProjectName0 = \u0022$/SAMS_20040114/TaskControl\u0022,\u0020LDAAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}.Debug.ActiveCfg = Debug|.NET
+		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}.Debug.Build.0 = Debug|.NET
+		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}.Release.ActiveCfg = Release|.NET
+		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

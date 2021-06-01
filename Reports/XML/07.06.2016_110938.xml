@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Policies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="pps-simple-auto-policy">
+  <Policy>
+    <PolicyID>PAP</PolicyID>
+    <Incept>2016-07-06T00:00:00</Incept>
+    <Expire>2017-07-06T00:00:00</Expire>
+    <RenewalOf>PAP0010070-00</RenewalOf>
+    <BrokerID>001</BrokerID>
+    <CanDate xsi:nil="true" />
+    <TmpTime xsi:nil="true" />
+    <BinderID>PAP0010070-00</BinderID>
+    <ComRate>0.0000000e+000</ComRate>
+    <Client>0</Client>
+    <Tag xsi:nil="true" />
+    <Premium>2679</Premium>
+    <DispImage>Policy</DispImage>
+    <SpecEndorse xsi:nil="true" />
+    <SID>0</SID>
+    <UDPolicyID>0</UDPolicyID>
+    <PreparedBy>VICTOR LANZA</PreparedBy>
+    <ExcessLink>0</ExcessLink>
+    <PolSubType>0</PolSubType>
+    <ReinsPcnt>0.0000000e+000</ReinsPcnt>
+    <Assessment>0.0000</Assessment>
+    <PayDate xsi:nil="true" />
+    <PolRelTable>
+      <PolRel>
+        <PolicyID>PAP</PolicyID>
+        <Upid>100308</Upid>
+        <Polrelat>NI</Polrelat>
+        <EntNamesTable>
+          <EntNames>
+            <LastName>
+            </LastName>
+            <FirstName>FELIX</FirstName>
+            <Middle />
+            <Upid>0</Upid>
+            <Dob>1980-01-01T00:00:00</Dob>
+            <Sex>M</Sex>
+            <Marital>S</Marital>
+            <Yrsexp>0</Yrsexp>
+            <License xsi:nil="true" />
+            <State>VI</State>
+            <Ssn>109511</Ssn>
+            <BusFlag>1</BusFlag>
+            <Nsbyt>0</Nsbyt>
+            <BusOther xsi:nil="true" />
+            <BusType>256</BusType>
+            <Client xsi:nil="true" />
+            <PolRelat xsi:nil="true" />
+            <DispImage>Person</DispImage>
+          </EntNames>
+        </EntNamesTable>
+      </PolRel>
+    </PolRelTable>
+    <VehicleTable>
+      <Vehicle>
+        <Vin>ERGRTHR45156</Vin>
+        <PolicyID>PAP</PolicyID>
+        <UseClass>PVT</UseClass>
+        <LicPlate>ILC-123</LicPlate>
+        <PurchDate>1753-01-01T00:00:00</PurchDate>
+        <ActCost>0.0000</ActCost>
+        <InsVal>0.0000</InsVal>
+        <InsValFlag xsi:nil="true" />
+        <Payee xsi:nil="true" />
+        <Island>1</Island>
+        <Leased>0</Leased>
+        <RegExp>0</RegExp>
+        <PAE>0</PAE>
+        <End22>0</End22>
+        <End23>0</End23>
+        <PayeeID>274</PayeeID>
+        <TagNumber xsi:nil="true" />
+        <PhysVehicleTable>
+          <PhysVehicle>
+            <Vin>ERGRTHR45156</Vin>
+            <MYear>2015</MYear>
+            <Make>CHRYSLER</Make>
+            <Model>ASPEN HYBRID 4WD</Model>
+            <BodyType>PU</BodyType>
+            <Cylinder>0</Cylinder>
+            <Passengers>0</Passengers>
+            <TwoTon>0</TwoTon>
+            <Salvaged>0</Salvaged>
+          </PhysVehicle>
+        </PhysVehicleTable>
+        <VehicleCvrgTable>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>05211</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>500</Lim1>
+            <Lim2>0.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>06211</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>1000</Lim1>
+            <Lim2>0.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>01192</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>10000.0000</Lim1>
+            <Lim2>20000.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>02192</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>10000</Lim1>
+            <Lim2>0.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>03192</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>1000.0000</Lim1>
+            <Lim2>5000.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>78192</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>0.0000</Lim1>
+            <Lim2>0.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>01192</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>0.0000</Lim1>
+            <Lim2>0.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+          <VehicleCvrg>
+            <Vin>ERGRTHR45156</Vin>
+            <ReinsAsl>04211</ReinsAsl>
+            <PolicyID>PAP</PolicyID>
+            <Lim1>10000.0000</Lim1>
+            <Lim2>0.0000</Lim2>
+            <Premium>2679</Premium>
+          </VehicleCvrg>
+        </VehicleCvrgTable>
+      </Vehicle>
+    </VehicleTable>
+    <ClientTable>
+      <Client>
+        <Client>100308</Client>
+        <Maddr1>URBANIZACION GUARDIAN</Maddr1>
+        <Maddr2>
+        </Maddr2>
+        <Maddr3>0</Maddr3>
+        <Mcity>CAGUAS</Mcity>
+        <Mstate>CAGUAS</Mstate>
+        <Mnation>0</Mnation>
+        <Mzip>00725</Mzip>
+        <Raddr1>8744 LINBERG BAY</Raddr1>
+        <Raddr2>0</Raddr2>
+        <Raddr3>0</Raddr3>
+        <Rcity>ST  THOMAS</Rcity>
+        <Rstate>VI</Rstate>
+        <Rnation>0</Rnation>
+        <Rzip>00802</Rzip>
+        <Wphone>0</Wphone>
+        <Rphone>0</Rphone>
+        <Csbyt>0</Csbyt>
+        <Cphone>340-776-7798</Cphone>
+        <Eaddr>ABC@A.COM</Eaddr>
+      </Client>
+    </ClientTable>
+  </Policy>
+</Policies>
