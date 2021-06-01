@@ -142,6 +142,7 @@ namespace EPolicy
                         DataTable dtNewUse = EPolicy.LookupTables.LookupTables.GetTable("NewUse");
                         DataTable dtBank = EPolicy.LookupTables.LookupTables.GetTable("Bank");
                         DataTable dtObligee = EPolicy.LookupTables.LookupTables.GetTable("BondsObligee");
+                        DataTable dtPolicyClass = EPolicy.LookupTables.LookupTables.GetTable("PolicyClass");
                         DataTable dtDealer = EPolicy.Login.Login.GetGroupDealerByUserID(userID);
                         DataTable dtTypeOfBond = GetTypeOfBond();
 
@@ -168,7 +169,7 @@ namespace EPolicy
                                 dtTypeOfBond.Rows[y].Delete();
                             }
                         }
-                        
+
 
 
                         List<System.Web.UI.WebControls.ListItem> items = new List<System.Web.UI.WebControls.ListItem>();
@@ -190,6 +191,14 @@ namespace EPolicy
                         ddlOriginatedAt.DataBind();
                         ddlOriginatedAt.SelectedIndex = -1;
                         ddlOriginatedAt.Items.Insert(0, "");
+
+                        //PolicyClass
+                        ddlPolicyClass.DataSource = dtPolicyClass;
+                        ddlPolicyClass.DataTextField = "PolicyClassDesc";
+                        ddlPolicyClass.DataValueField = "PolicyClassID";
+                        ddlPolicyClass.DataBind();
+                        ddlPolicyClass.SelectedValue = taskControl.PolicyClassID.ToString();
+                        ddlPolicyClass.Items.Insert(0, "");
 
                         //Agency
                         ddlAgency.DataSource = dtAgency;
@@ -218,7 +227,7 @@ namespace EPolicy
                             ddlAgent.SelectedIndex = -1;
                             ddlAgent.Items.Insert(0, "");
                         }
-                        
+
 
                         //InsuranceCompany
                         ddlInsuranceCompany.DataSource = dtInsuranceCompany;
@@ -357,7 +366,7 @@ namespace EPolicy
 
             ChkAutoAssignPolicy.Checked = taskControl.AutoAssignPolicy;
 
-            
+
 
             if (taskControl.OriginatedAt != 0)
                 ddlOriginatedAt.SelectedIndex = ddlOriginatedAt.Items.IndexOf(
@@ -491,7 +500,7 @@ namespace EPolicy
             //    if (ddlPaymentAmount.Items.IndexOf(ddlPaymentAmount.Items.FindByValue(taskControl.PaymentAmount.ToString())) != -1 && taskControl.PaymentAmount == 50000.0) 
             //        ddlPaymentAmount.SelectedIndex = 2;
             //}
-          
+
 
             if (taskControl.Bank != "")
             {
@@ -640,9 +649,9 @@ namespace EPolicy
 
 
             txtEntryDate.Text = taskControl.EntryDate.ToShortDateString();
-           
+
             //txtTotalPremium.Text = taskControl.TotalPremium.ToString("###,###.00"); //Se descomento para que llenara el textbox y se pueda salvar la poliza sin cambiar el dropdown de premium
-            if(taskControl.TotalPremium.ToString() == "0") //aqui
+            if (taskControl.TotalPremium.ToString() == "0") //aqui
                 txtPremium.Text = taskControl.TotalPremium.ToString("###,###"); //Se descomento para que llenara el textbox y se pueda salvar la poliza sin cambiar el dropdown de premium
             else
                 txtPremium.Text = taskControl.TotalPremium.ToString("$###,###.00");
@@ -655,13 +664,13 @@ namespace EPolicy
                 txtPhyState.Text = taskControl.Customer.State == "" ? "St.Thomas" : taskControl.Customer.State;
             if (cp.IsInRole("BONDS") || cp.IsInRole("ADMINISTRATOR"))
                 txtPhyState.Text = taskControl.Customer.State == "" ? "PR" : taskControl.Customer.State;
-           
+
 
             txtTotalPremium.Text = taskControl.TotalPremium.ToString();
             txtDescriptionBond.Text = taskControl.BondDescription.Trim();
-            txtReqDocuments.Text = taskControl.BondRequiredDocuments.Trim();  
-            
-                EncryptClass.EncryptClass encrypt = new EncryptClass.EncryptClass();
+            txtReqDocuments.Text = taskControl.BondRequiredDocuments.Trim();
+
+            EncryptClass.EncryptClass encrypt = new EncryptClass.EncryptClass();
 
 
             if (taskControl.TypeOfBond != 0)
@@ -946,13 +955,13 @@ namespace EPolicy
                 {
                     //if (!lblBondFound.Visible)
                     //{
-                        btnAcceptQuote.Visible = false;
-                        btnEdit.Visible = false;
-                        btnPreview.Visible = false;
-                        //btnIndemnityQuote.Visible = false;
-                        btnPrintPolicy.Visible = true;
-                        //btnIndemnityPolicy.Visible = true;
-                        btnInvoice.Visible = true;
+                    btnAcceptQuote.Visible = false;
+                    btnEdit.Visible = false;
+                    btnPreview.Visible = false;
+                    //btnIndemnityQuote.Visible = false;
+                    btnPrintPolicy.Visible = true;
+                    //btnIndemnityPolicy.Visible = true;
+                    btnInvoice.Visible = true;
                     //}
                 }
             }
@@ -1518,7 +1527,7 @@ namespace EPolicy
                 taskControl.Customer.LocationID = taskControlQuote.Customer.LocationID;
 
                 taskControl.Customer.SocialSecurity = taskControlQuote.Customer.SocialSecurity;
-               
+
 
 
                 taskControl.PolicyType = "BND";
@@ -1634,7 +1643,7 @@ namespace EPolicy
                 //        }
                 //    }
                 //}
-         
+
                 //Effective date
 
                 if (this.ddlType.SelectedItem.Text.ToString() == "Individual")
@@ -1810,7 +1819,7 @@ namespace EPolicy
 
                     if (PenaltyLimit > 0)
                     {
-                        if (double.Parse(txtPenalty.Text.Replace(",","").Replace("$","")) > PenaltyLimit)
+                        if (double.Parse(txtPenalty.Text.Replace(",", "").Replace("$", "")) > PenaltyLimit)
                         {
                             errorMessages.Add("The maximum penalty limit is " + String.Format("{0:c0}", int.Parse(PenaltyLimit.ToString(), System.Globalization.NumberStyles.Currency)) + "\r\n");
                         }
@@ -2124,7 +2133,7 @@ namespace EPolicy
                 taskControl.CustomerType = int.Parse(ddlType.SelectedValue.ToString());
                 taskControl.Customer.Dependents = int.Parse(ddlType.SelectedValue.ToString());
                 taskControl.Customer.LocationID = 1;// PUERTO RICO ONLY
- 
+
                 EncryptClass.EncryptClass encrypt = new EncryptClass.EncryptClass();
 
                 if (txtSocSec.Text.Trim().Replace("*", "").Replace("-", "").Replace("_", "") != "")
@@ -2141,7 +2150,7 @@ namespace EPolicy
                 taskControl.RenewalOfBnd = txtPolicyNoToRenew.Text.Trim();
                 taskControl.Customer.LocationID = EPolicy.Login.Login.GetLocationByUserID(userID);
                 taskControl.Signature = ddlSignature.SelectedItem.Value.ToString();
-             
+
                 //if (ddlPaymentAmount.SelectedItem.Text.Trim() == "")
                 //{
                 //    taskControl.PaymentAmount = 0.0;
@@ -2150,7 +2159,7 @@ namespace EPolicy
                 //{
                 //    taskControl.PaymentAmount = double.Parse(ddlPaymentAmount.SelectedItem.Value);
                 //}
-               
+
 
                 //if (ddlPaymentAmount.SelectedItem.ToString() == "N/A")
                 //{
@@ -2254,11 +2263,11 @@ namespace EPolicy
             txtPhyAddress2.Enabled = true;
             txtPhyState.Enabled = true;
 
-            
+
             //al entrar un bond nuevo el SS puede ser añadido por cualquier usario
             //una vez añadido solo los que tengan el permiso "MODIFY SOCIAL SECURITY" podran cambiarlo 
 
-            if (taskControl.TaskControlID !=0)
+            if (taskControl.TaskControlID != 0)
             {
                 txtSocSec.Enabled = false;//false
             }
@@ -2349,7 +2358,7 @@ namespace EPolicy
             ddlInsuranceCompany.Enabled = false;
             ddlAgency.Enabled = false;
             ddlSignature.Enabled = true;
-           
+
             //if (ddlObligee.SelectedItem.Text.Contains("Mortgage Lenders") || ddlObligee.SelectedItem.Text.Contains("Mortgage Loan Originator"))
             //{
             //    ddlPaymentAmount.Enabled = true;
@@ -2373,8 +2382,8 @@ namespace EPolicy
                 || ddlObligee.SelectedItem.Text.Contains("Private Investigative Agency Surety") || ddlObligee.SelectedItem.Text.Contains("Power of Attorney") || ddlObligee.SelectedItem.Text.Contains("Resident Line Brokers")
                 || ddlObligee.SelectedItem.Text.Contains("Notary Public - VI"))
                 txtPenalty.Enabled = false;
-            else 
-               txtPenalty.Enabled = true; 
+            else
+                txtPenalty.Enabled = true;
 
             //Si esta pagada la poliza no dispone el policyType, la agencia, agentes y supplier y el totalPremium + Charge.
             //Se cambio dllAgent.Enabled a true por Joshua
@@ -2473,7 +2482,7 @@ namespace EPolicy
                     txtSocSec.Text = "";
 
                 MaskedEditExtender1.Mask = "999-99-9999";
-            }	
+            }
         }
 
         protected void btnPreview_Click(object sender, EventArgs e)
@@ -2503,7 +2512,7 @@ namespace EPolicy
             {
                 PrintBondsQuote();
             }
-            
+
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
@@ -3151,7 +3160,7 @@ namespace EPolicy
             {
                 PrintBondsPolicy();
             }
-            
+
         }
 
         protected void PrintBondsPolicy()
@@ -3513,11 +3522,11 @@ namespace EPolicy
                     string limitwords = "";
                     if (limit == "$25,000.00")
                     {
-                        limitwords = "TWENTY-FIVE THOUSAND DOLLARS"; 
+                        limitwords = "TWENTY-FIVE THOUSAND DOLLARS";
                     }
                     else if (limit == "$50,000.00")
                     {
-                        limitwords = "FIFTY THOUSAND DOLLARS"; 
+                        limitwords = "FIFTY THOUSAND DOLLARS";
                     }
                     else
                     {
@@ -3733,7 +3742,8 @@ namespace EPolicy
 
                 PrintBondsPDFMerge(mergePaths, ProcessedPath);
             }
-            catch(Exception ex){
+            catch (Exception ex)
+            {
                 LogError(ex);
             }
         }
@@ -3792,7 +3802,7 @@ namespace EPolicy
             string targetPath = ProcessedPath + @"\Bonds\Copy\";
 
             // Use Path class to manipulate file and directory paths.
-            string sourceFile = System.IO.Path.Combine(sourcePath, fileName+ ".docx");
+            string sourceFile = System.IO.Path.Combine(sourcePath, fileName + ".docx");
             string copyFileName = fileName + DateTime.Now.ToString().Replace("/", "-").Replace(":", "").Replace(" ", "") + ".docx";
             string destFile = System.IO.Path.Combine(targetPath, copyFileName);
 
@@ -4134,7 +4144,7 @@ namespace EPolicy
             }
         }
 
-        private List<string> imprimirPolicy(List<string> mergePaths, string name) 
+        private List<string> imprimirPolicy(List<string> mergePaths, string name)
         {
             try
             {
@@ -4320,7 +4330,7 @@ namespace EPolicy
                 Cantidad = Cantidad.Replace("Setenta Y Uno", "Setentaiun Mil");
                 Cantidad = Cantidad.Replace("Ochenta Y Uno", "Ochentaiun Mil");
                 Cantidad = Cantidad.Replace("Ciento Uno Mil", "Cientoun Mil");
-              
+
 
                 int ParametersCount = 3;
                 string Amt1 = "";
@@ -4391,7 +4401,7 @@ namespace EPolicy
 
                         if (TxtPolicyNo.Text.Trim().Contains("-"))
                         {
-                            param[4] = new ReportParameter("BondsNo", TxtPolicyNo.Text.Trim().Substring(0, TxtPolicyNo.Text.Trim().IndexOf("-")).Replace("bnd",""));
+                            param[4] = new ReportParameter("BondsNo", TxtPolicyNo.Text.Trim().Substring(0, TxtPolicyNo.Text.Trim().IndexOf("-")).Replace("bnd", ""));
                         }
                         else
                         {
@@ -4439,11 +4449,14 @@ namespace EPolicy
                         }
                     }
 
-                    else if (RDLC == "MortageLendersBond.rdlc") {
-                        if(ddlSignature.SelectedItem.Text == "President"){
+                    else if (RDLC == "MortageLendersBond.rdlc")
+                    {
+                        if (ddlSignature.SelectedItem.Text == "President")
+                        {
                             param[3] = new ReportParameter("Signature", "Raymond L. Fournier, President");
                         }
-                        if(ddlSignature.SelectedItem.Text == "Vice President"){
+                        if (ddlSignature.SelectedItem.Text == "Vice President")
+                        {
                             param[3] = new ReportParameter("Signature", "Octavio Estrada, Vice President");
                         }
                         if (txtPenalty.Text.Contains("$25,000.00"))
@@ -4464,7 +4477,7 @@ namespace EPolicy
                         //    param[4] = new ReportParameter("PaymentAmount", "$50,000.00");
                         //    param[5] = new ReportParameter("PaymentAmountWords", "Fifty Thousand Dollars");
                         //}
-                       
+
                     }
 
                     else if (RDLC == "MortageLendersBondCompany.rdlc")
@@ -4619,11 +4632,11 @@ namespace EPolicy
                         }
 
                     }
-                 
-                 
+
+
                 }
 
-                
+
 
                 ReportViewer viewer1 = new ReportViewer();
                 viewer1.LocalReport.DataSources.Clear();
@@ -5801,12 +5814,12 @@ namespace EPolicy
                         txtPenalty.Enabled = false;
                         break;
                     default:
-                          ddlObligee.SelectedIndex = 0;
+                        ddlObligee.SelectedIndex = 0;
                         break;
                 }
             }
         }
-        
+
 
         protected void ddlObligee_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -5927,16 +5940,16 @@ namespace EPolicy
                 txtCompanyName.Enabled = true;
             }
 
-            if (ddlObligee.SelectedItem.Value.ToString() == "12" || ddlObligee.SelectedItem.Value.ToString() == "13" || ddlObligee.SelectedItem.Value.ToString() == "14" || 
-                ddlObligee.SelectedItem.Value.ToString() == "15" || ddlObligee.SelectedItem.Value.ToString() == "16" || ddlObligee.SelectedItem.Value.ToString() == "17" || 
-                ddlObligee.SelectedItem.Value.ToString() == "18" || ddlObligee.SelectedItem.Value.ToString() == "19" || ddlObligee.SelectedItem.Value.ToString() == "20" || 
+            if (ddlObligee.SelectedItem.Value.ToString() == "12" || ddlObligee.SelectedItem.Value.ToString() == "13" || ddlObligee.SelectedItem.Value.ToString() == "14" ||
+                ddlObligee.SelectedItem.Value.ToString() == "15" || ddlObligee.SelectedItem.Value.ToString() == "16" || ddlObligee.SelectedItem.Value.ToString() == "17" ||
+                ddlObligee.SelectedItem.Value.ToString() == "18" || ddlObligee.SelectedItem.Value.ToString() == "19" || ddlObligee.SelectedItem.Value.ToString() == "20" ||
                 ddlObligee.SelectedItem.Value.ToString() == "21")
             {
                 LabelSignature.ForeColor = System.Drawing.Color.Red;
             }
 
 
-            
+
         }
 
         private DataTable GetPaymentByTaskControlID()
@@ -6024,7 +6037,7 @@ namespace EPolicy
                     BndTypeID = dtBond.Rows[0]["TypeOfBondID"].ToString().Trim();
                     BndReinsASL = dtBond.Rows[0]["ReinsASL"].ToString().Trim();
                 }
-                
+
                 cmd.CommandText = "sproc_ConsumeXMLePPS-BONDS";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = sqlConnection1;
@@ -6437,7 +6450,7 @@ namespace EPolicy
             try
             {
                 string cn = System.Configuration.ConfigurationManager.AppSettings["ConnStrPPS"].ToString();
-//@"Data Source=GIC-MSQL\PPSSQLSERVER;Initial Catalog=AgentTestData;User ID=urclaims;password=3G@TD@t!1";
+                //@"Data Source=GIC-MSQL\PPSSQLSERVER;Initial Catalog=AgentTestData;User ID=urclaims;password=3G@TD@t!1";
                 DataTable table = new DataTable();
                 using (var con = new SqlConnection(cn))
                 using (var cmd = new SqlCommand("sproc_ConsumeXMLePPS-BONDS_Verify", con))
@@ -6542,7 +6555,7 @@ namespace EPolicy
                 {
                     Found = false;
                 }
-      
+
 
                 return Found;
             }
@@ -6572,7 +6585,7 @@ namespace EPolicy
             }
             catch (Exception ex)
             {
-               throw new Exception(ex.InnerException.ToString(), ex);
+                throw new Exception(ex.InnerException.ToString(), ex);
             }
         }
 
@@ -6695,6 +6708,12 @@ namespace EPolicy
         }
 
         protected void ddlTransaction_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            //Session["Transaction"] = ddlTransaction.SelectedIndex;
+            mpeAdjunto.Show();
+        }
+
+        protected void ddlPolicyClass_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             //Session["Transaction"] = ddlTransaction.SelectedIndex;
             mpeAdjunto.Show();
@@ -6949,7 +6968,7 @@ namespace EPolicy
                 }
 
                 //SaveDocuments
-                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim());
+                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim(), taskControl.TaskControlTypeID.ToString());
 
                 //Upload Document
                 if (FileUpload1.PostedFile.FileName != null)

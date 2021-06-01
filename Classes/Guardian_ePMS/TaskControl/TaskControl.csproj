@@ -181,6 +181,7 @@
     <Compile Include="Autos.cs" />
     <Compile Include="Bonds.cs" />
     <Compile Include="CompulsoryInsuranceQuote.cs" />
+    <Compile Include="RES.cs" />
     <Compile Include="CreateXML.cs" />
     <Compile Include="DeferredPayment.cs" />
     <Compile Include="DoubleInterest.cs" />
@@ -220,6 +221,12 @@
     </Compile>
     <Compile Include="Umbrella.cs" />
     <Compile Include="Yacht.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{F6153F74-5F19-43B4-BE25-44D4E899FA8F}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -1,53 +1,41 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Guardian_ePMS", ".", "{2C36FAFC-A979-4D19-A7B6-A8C5468B6CFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audit", "Classes\Guardian_ePMS\Audit\Audit.csproj", "{F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer", "Classes\Guardian_ePMS\Customer\Customer.csproj", "{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookupTables", "Classes\Guardian_ePMS\LookupTables\LookupTables.csproj", "{4916AD18-B1F2-4BD4-AB4A-5C9A1898280F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaskedInput", "Classes\Guardian_ePMS\MaskedInput\MaskedInput.csproj", "{AF3705ED-BA91-4685-81A4-BF913B846745}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quotes", "Classes\Guardian_ePMS\Quotes\Quotes.csproj", "{4F702ED6-3E5E-4F79-959E-151CEEFC8D48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskControl", "Classes\Guardian_ePMS\TaskControl\TaskControl.csproj", "{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Classes\Guardian_ePMS\Login\Login.csproj", "{38656FAB-F8C4-4349-982F-9DB8D67AD62C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Classes\Guardian_ePMS\Utilities\Utilities.csproj", "{F6153F74-5F19-43B4-BE25-44D4E899FA8F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EpmsTest", "..\EpmsTest", "{A86E4CD6-53A3-43A8-B7F5-762A7934767A}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{4916AD18-B1F2-4BD4-AB4A-5C9A1898280F}|LookupTables.dll;{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}|Customer.dll;{AF3705ED-BA91-4685-81A4-BF913B846745}|MaskedInput.dll;{4F702ED6-3E5E-4F79-959E-151CEEFC8D48}|Quotes.dll;{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}|TaskControl.dll;{F6153F74-5F19-43B4-BE25-44D4E899FA8F}|Utilities.dll;{38656FAB-F8C4-4349-982F-9DB8D67AD62C}|Login.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/Optima2008"
-		Debug.AspNetCompiler.PhysicalPath = "..\Guardian_ePMS\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Optima2008\"
+		Debug.AspNetCompiler.VirtualPath = "/EpmsTest"
+		Debug.AspNetCompiler.PhysicalPath = "..\EpmsTest\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\EpmsTest\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/Optima2008"
-		Release.AspNetCompiler.PhysicalPath = "..\Guardian_ePMS\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Optima2008\"
+		Release.AspNetCompiler.VirtualPath = "/EpmsTest"
+		Release.AspNetCompiler.PhysicalPath = "..\EpmsTest\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\EpmsTest\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "51541"
-		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
-	ProjectSection(ProjectDependencies) = postProject
-		{4916AD18-B1F2-4BD4-AB4A-5C9A1898280F} = {4916AD18-B1F2-4BD4-AB4A-5C9A1898280F}
-		{F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3} = {F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3}
-		{F6153F74-5F19-43B4-BE25-44D4E899FA8F} = {F6153F74-5F19-43B4-BE25-44D4E899FA8F}
-		{38656FAB-F8C4-4349-982F-9DB8D67AD62C} = {38656FAB-F8C4-4349-982F-9DB8D67AD62C}
-		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF} = {CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}
-		{4F702ED6-3E5E-4F79-959E-151CEEFC8D48} = {4F702ED6-3E5E-4F79-959E-151CEEFC8D48}
-		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D} = {BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}
-		{AF3705ED-BA91-4685-81A4-BF913B846745} = {AF3705ED-BA91-4685-81A4-BF913B846745}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer", "..\..\..\Guardian_ePMS\Customer\Customer.csproj", "{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audit", "..\..\..\Guardian_ePMS\Audit\Audit.csproj", "{F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\..\..\Guardian_ePMS\Login\Login.csproj", "{38656FAB-F8C4-4349-982F-9DB8D67AD62C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookupTables", "..\..\..\Guardian_ePMS\LookupTables\LookupTables.csproj", "{4916AD18-B1F2-4BD4-AB4A-5C9A1898280F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaskedInput", "..\..\..\Guardian_ePMS\MaskedInput\MaskedInput.csproj", "{AF3705ED-BA91-4685-81A4-BF913B846745}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quotes", "..\..\..\Guardian_ePMS\Quotes\Quotes.csproj", "{4F702ED6-3E5E-4F79-959E-151CEEFC8D48}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskControl", "..\..\..\Guardian_ePMS\TaskControl\TaskControl.csproj", "{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "..\..\..\Guardian_ePMS\Utilities\Utilities.csproj", "{F6153F74-5F19-43B4-BE25-44D4E899FA8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,22 +43,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C36FAFC-A979-4D19-A7B6-A8C5468B6CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C36FAFC-A979-4D19-A7B6-A8C5468B6CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C36FAFC-A979-4D19-A7B6-A8C5468B6CFB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C36FAFC-A979-4D19-A7B6-A8C5468B6CFB}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F278C853-3ACA-4D2C-8DBF-5D6D5A1C9FD3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDC29DC-E929-4FD0-9971-D22EEF0AFD8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4916AD18-B1F2-4BD4-AB4A-5C9A1898280F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4916AD18-B1F2-4BD4-AB4A-5C9A1898280F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4916AD18-B1F2-4BD4-AB4A-5C9A1898280F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,10 +67,18 @@ Global
 		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD6D5CBC-76D2-496F-A6AB-85E0D67E0EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38656FAB-F8C4-4349-982F-9DB8D67AD62C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6153F74-5F19-43B4-BE25-44D4E899FA8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6153F74-5F19-43B4-BE25-44D4E899FA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6153F74-5F19-43B4-BE25-44D4E899FA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6153F74-5F19-43B4-BE25-44D4E899FA8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86E4CD6-53A3-43A8-B7F5-762A7934767A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86E4CD6-53A3-43A8-B7F5-762A7934767A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86E4CD6-53A3-43A8-B7F5-762A7934767A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86E4CD6-53A3-43A8-B7F5-762A7934767A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

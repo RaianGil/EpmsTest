@@ -70,6 +70,7 @@ namespace EPolicy
             ddlCancellationReason.SelectedIndex = -1;
             ddlCancellationReason.Items.Insert(0, "");
 
+
             ddlCancellationReason.SelectedIndex = ddlCancellationReason.Items.IndexOf(ddlCancellationReason.Items.FindByText("Customer Request"));
         }
 
@@ -199,7 +200,16 @@ namespace EPolicy
             //TaskControl.Policy taskControl = (TaskControl.Policy)Session["TaskControl"];
             TaskControl.Policy taskControl = GetTaskControl();
             DataTable dt = null;
-            
+            DataTable dtPolicyClass = LookupTables.LookupTables.GetTable("PolicyClass");
+
+            //PolicyClass
+            ddlPolicyClass.DataSource = dtPolicyClass;
+            ddlPolicyClass.DataTextField = "PolicyClassDesc";
+            ddlPolicyClass.DataValueField = "PolicyClassID";
+            ddlPolicyClass.DataBind();
+            ddlPolicyClass.SelectedValue = taskControl.PolicyClassID.ToString();
+            ddlPolicyClass.Items.Insert(0, "");
+
             StatusButtonDisplay();
             dt = GetPolicyCancellationByTaskcontrolID(GetPolicyTaskControlID());
             BtnSaveToPolicyCancelation.Text = "Submit";
@@ -300,6 +310,7 @@ namespace EPolicy
             {
                 TxtCancellationEntryDate.Text = DateTime.Now.ToShortDateString();
             }
+
         }
 		
 		 private bool IsPolicyFinanced()

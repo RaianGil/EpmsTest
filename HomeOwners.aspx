@@ -1611,6 +1611,17 @@
                                <table class="MainMenu" style="width: 78%; margin-right: 0px; height: 276px;">
                                    <tr>
                                        <td align="left">
+                                           <asp:Label ID="Label7" runat="server" Font-Bold="True" Font-Names="Gotham Book">Type of Business:</asp:Label>
+                                       </td>
+                                       <td align="left">
+                                                <asp:DropDownList ID="ddlPolicyClass" runat="server" 
+                                                    CssClass="form-controlWhite" Width="350px" Height="31px" AutoPostBack="True" EnableViewState="true" 
+                                                    onselectedindexchanged="ddlTransaction_SelectedIndexChanged"></asp:DropDownList>
+                                           &nbsp;
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td align="left">
                                            <asp:Label ID="Label23" runat="server" Font-Bold="True" Font-Names="Gotham Book">Description:</asp:Label>
                                        </td>
                                        <td align="left">

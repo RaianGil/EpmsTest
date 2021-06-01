@@ -390,6 +390,7 @@ namespace EPolicy
 
         protected void FillLookupTables()
         {
+            TaskControl.Autos taskControl = new TaskControl.Autos(true);
             DataTable dtLocation = EPolicy.LookupTables.LookupTables.GetTable("Location");
             DataTable dtAgency = EPolicy.LookupTables.LookupTables.GetTable("Agency");
             DataTable dtAgent = EPolicy.LookupTables.LookupTables.GetTable("AgentVI");
@@ -405,6 +406,7 @@ namespace EPolicy
             DataTable dtOccupations = EPolicy.LookupTables.LookupTables.GetTable("Occupations");
             DataTable dtBankList = EPolicy.LookupTables.LookupTables.GetTable("Bank_VI");
 			DataTable dtOver2TonIsHeavy = EPolicy.LookupTables.LookupTables.GetTable("Over2TonIsHeavy");
+            DataTable dtPolicyClass = EPolicy.LookupTables.LookupTables.GetTable("PolicyClass");
 
             //Over2TonIsHeavy
             ddlOver2Ton.DataSource = dtOver2TonIsHeavy;
@@ -428,6 +430,14 @@ namespace EPolicy
             ddlAgency.DataBind();
             ddlAgency.SelectedIndex = -1;
             ddlAgency.Items.Insert(0, "");
+
+            //PolicyClass
+            ddlPolicyClass.DataSource = dtPolicyClass;
+            ddlPolicyClass.DataTextField = "PolicyClassDesc";
+            ddlPolicyClass.DataValueField = "PolicyClassID";
+            ddlPolicyClass.DataBind();
+            ddlPolicyClass.SelectedValue = taskControl.PolicyClassID.ToString();
+            ddlPolicyClass.Items.Insert(0, "");
 
             //Agent
             ddlAgent.DataSource = dtAgent;
@@ -26140,7 +26150,7 @@ Math.Truncate(double.Parse((double.Parse(taskControl.VehicleCollection.Rows[i]["
                 }
 
                 //SaveDocuments
-                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim());
+                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim(), taskControl.TaskControlTypeID.ToString());
 
                 //Upload Document
                 if (FileUpload1.PostedFile.FileName != null)

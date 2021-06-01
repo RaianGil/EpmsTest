@@ -602,6 +602,23 @@ namespace EPolicy.TaskControl
                            null, null, new object[2] { TaskControlID, true });
                         break;
 
+                    case 42:                   // Bonds
+                        taskControlDesc = "RES";
+                        t = Type.GetType("EPolicy.TaskControl." + taskControlDesc, true);
+                        taskControl = (TaskControl)t.InvokeMember("Get" + taskControlDesc,
+                            BindingFlags.Public | BindingFlags.InvokeMethod | BindingFlags.Static,
+                           null, null, new object[2] { TaskControlID, false });
+                        break;
+
+                    case 43:                   // Bonds Quote
+                        taskControlDesc = "RES";
+                        t = Type.GetType("EPolicy.TaskControl." + taskControlDesc, true);
+                        taskControl = (TaskControl)t.InvokeMember("Get" + taskControlDesc,
+                            BindingFlags.Public | BindingFlags.InvokeMethod | BindingFlags.Static,
+                           null, null, new object[2] { TaskControlID, true });
+                        break;
+
+
                     default:		   //Other Types
 						t = Type.GetType("EPolicy.TaskControl." + taskControlDesc,true);
 						taskControl = (TaskControl) t.InvokeMember("Get"+taskControlDesc,

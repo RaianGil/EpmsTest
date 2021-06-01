@@ -784,7 +784,7 @@ namespace EPolicy.Customer
         //    }
         //}
 
-        public static int Savedocuments(string CustomerNo, string DocumentDesc, string TaskControlID, string TaskControlTypeID)
+        public static int Savedocuments(string CustomerNo, string DocumentDesc, string TaskControlID, string TaskControlTypeID, string PolicyClassID)
         {
             try
             {
@@ -792,11 +792,12 @@ namespace EPolicy.Customer
                 int id = 0;
                 try
                 {
-                    DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[4];
+                    DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[5];
                     DbRequestXmlCooker.AttachCookItem("CustomerNo", SqlDbType.Int, 0, CustomerNo, ref cookItems);
                     DbRequestXmlCooker.AttachCookItem("Description", SqlDbType.VarChar, 200, DocumentDesc, ref cookItems);
                     DbRequestXmlCooker.AttachCookItem("TaskControlID", SqlDbType.Int, 0, TaskControlID, ref cookItems);
                     DbRequestXmlCooker.AttachCookItem("TaskControlTypeID", SqlDbType.Int, 0, TaskControlTypeID, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("PolicyClassID", SqlDbType.Int, 0, PolicyClassID, ref cookItems);
                     XmlDocument xmlDoc = DbRequestXmlCooker.Cook(cookItems);
 
                     Executor.BeginTrans();
@@ -817,7 +818,7 @@ namespace EPolicy.Customer
             }
         }
 
-        public static int Savedocuments(string CustomerNo, string DocumentDesc, string TaskControlID)
+        public static int Savedocuments1(string CustomerNo, string DocumentDesc, string TaskControlID, string TaskControlTypeID, string PolicyClassID)
         {
             try
             {
@@ -825,17 +826,86 @@ namespace EPolicy.Customer
                 int id = 0;
                 try
                 {
-                    DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[4];
+                    DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[5];
                     DbRequestXmlCooker.AttachCookItem("CustomerNo", SqlDbType.Int, 0, CustomerNo, ref cookItems);
                     DbRequestXmlCooker.AttachCookItem("Description", SqlDbType.VarChar, 200, DocumentDesc, ref cookItems);
                     DbRequestXmlCooker.AttachCookItem("TaskControlID", SqlDbType.Int, 0, TaskControlID, ref cookItems);
-                    DbRequestXmlCooker.AttachCookItem("TaskControlTypeID", SqlDbType.Int, 0, "0", ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("TaskControlTypeID", SqlDbType.Int, 0, TaskControlTypeID, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("PolicyClassID", SqlDbType.Int, 0, PolicyClassID, ref cookItems);
                     XmlDocument xmlDoc = DbRequestXmlCooker.Cook(cookItems);
 
                     Executor.BeginTrans();
                     id = Executor.Insert("AddDocuments", xmlDoc);
                     Executor.CommitTrans();
                 }
+                catch (Exception xcp)
+                {
+                    Executor.RollBackTrans();
+                    throw new Exception("Error Could not Save the Document, Try again.");
+                }
+
+                return id;
+            }
+            catch (Exception exp)
+            {
+                return 0;
+            }
+        }
+
+        public static int Savedocuments(string CustomerNo, string DocumentDesc, string TaskControlID, string PolicyClassID)
+        {
+            try
+            {
+                Baldrich.DBRequest.DBRequest Executor = new Baldrich.DBRequest.DBRequest();
+                int id = 0;
+                try
+                {
+                    DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[5];
+                    DbRequestXmlCooker.AttachCookItem("CustomerNo", SqlDbType.Int, 0, CustomerNo, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("Description", SqlDbType.VarChar, 200, DocumentDesc, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("TaskControlID", SqlDbType.Int, 0, TaskControlID, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("TaskControlTypeID", SqlDbType.Int, 0, "0", ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("PolicyClassID", SqlDbType.Int, 0, PolicyClassID, ref cookItems);
+                    XmlDocument xmlDoc = DbRequestXmlCooker.Cook(cookItems);
+
+                    Executor.BeginTrans();
+                    id = Executor.Insert("AddDocuments", xmlDoc);
+                    Executor.CommitTrans();
+                }
+                catch (Exception xcp)
+                {
+                    Executor.RollBackTrans();
+                    throw new Exception("Error Could not Save the Document, Try again.");
+                }
+
+                return id;
+            }
+            catch (Exception exp)
+            {
+                return 0;
+            }
+        }
+
+        public static int Savedocuments1(string CustomerNo, string DocumentDesc, string TaskControlID, string PolicyClassID)
+        {
+            try
+            {
+                Baldrich.DBRequest.DBRequest Executor = new Baldrich.DBRequest.DBRequest();
+                int id = 0;
+                try
+                {
+                    DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[5];
+                    DbRequestXmlCooker.AttachCookItem("CustomerNo", SqlDbType.Int, 0, CustomerNo, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("Description", SqlDbType.VarChar, 200, DocumentDesc, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("TaskControlID", SqlDbType.Int, 0, TaskControlID, ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("TaskControlTypeID", SqlDbType.Int, 0, "0", ref cookItems);
+                    DbRequestXmlCooker.AttachCookItem("PolicyClassID", SqlDbType.Int, 0, PolicyClassID, ref cookItems);
+                    XmlDocument xmlDoc = DbRequestXmlCooker.Cook(cookItems);
+
+                    Executor.BeginTrans();
+                    id = Executor.Insert("AddDocuments", xmlDoc);
+                    Executor.CommitTrans();
+                 }
                 catch (Exception xcp)
                 {
                     Executor.RollBackTrans();
@@ -891,10 +961,51 @@ namespace EPolicy.Customer
         {
             try
             {
-                DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[3];
+                DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[4];
                 DbRequestXmlCooker.AttachCookItem("CustomerNo", SqlDbType.Int, 0, CustomerNo.ToString(), ref cookItems);
                 DbRequestXmlCooker.AttachCookItem("TaskContolID", SqlDbType.Int, 0, TaskContolID.ToString(), ref cookItems);
                 DbRequestXmlCooker.AttachCookItem("OldTaskContolID", SqlDbType.Int, 0, OldTaskContolID.ToString(), ref cookItems);
+                DbRequestXmlCooker.AttachCookItem("PolicyClassID", SqlDbType.Int, 0, "0", ref cookItems);
+
+                Baldrich.DBRequest.DBRequest exec = new Baldrich.DBRequest.DBRequest();
+                XmlDocument xmlDoc;
+
+                try
+                {
+                    xmlDoc = DbRequestXmlCooker.Cook(cookItems);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Could not cook items.", ex);
+                }
+                DataTable dt = null;
+                try
+                {
+                    dt = exec.GetQuery("GetDocumentsByCustomerNo", xmlDoc);
+                    return dt;
+                }
+                catch (Exception ex)
+                {
+                    //throw new Exception("There is no information to display, please try again.", ex);
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public static DataTable GetDocumentsByCustomerNo1(string CustomerNo, int TaskContolID, int OldTaskContolID, int PolicyClassID)
+        {
+            try
+            {
+                DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[4];
+                DbRequestXmlCooker.AttachCookItem("CustomerNo", SqlDbType.Int, 0, CustomerNo.ToString(), ref cookItems);
+                DbRequestXmlCooker.AttachCookItem("TaskContolID", SqlDbType.Int, 0, TaskContolID.ToString(), ref cookItems);
+                DbRequestXmlCooker.AttachCookItem("OldTaskContolID", SqlDbType.Int, 0, OldTaskContolID.ToString(), ref cookItems);
+                DbRequestXmlCooker.AttachCookItem("PolicyClassID", SqlDbType.Int, 0, PolicyClassID.ToString(), ref cookItems);
 
                 Baldrich.DBRequest.DBRequest exec = new Baldrich.DBRequest.DBRequest();
                 XmlDocument xmlDoc;

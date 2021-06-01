@@ -134,6 +134,7 @@
                                 <asp:ListItem>NEW RESIDENTIAL PROPERTY</asp:ListItem>
                                 <asp:ListItem>NEW ROAD ASSIST</asp:ListItem>
                                 <asp:ListItem>NEW BOND</asp:ListItem>
+                                <asp:ListItem>NEW RES</asp:ListItem>
                                 <asp:ListItem>NEW YACHT</asp:ListItem>
                             </asp:DropDownList>
                             <asp:Button ID="btnNewApplication" runat="server" Width="210px" CssClass="btn btn-primary btn-lg"
@@ -669,8 +670,19 @@
                         text-align: left; vertical-align: bottom; background-color: #808080;">
                                &nbsp;&nbsp;&nbsp;<asp:Label ID="Label22" runat="server" Font-Bold="False" Font-Italic="False" Font-Names="Gotham Book" Font-Size="14pt" ForeColor="White" Text="Attach Documents" />
                            </div>
-                           <div class="">
+                           <div class="" style="height: 511px; overflow-y: auto; overflow-x: hidden;">
                                <table class="MainMenu" style="width: 78%; margin-right: 0px; height: 276px;">
+                                 `<tr>
+                                       <td align="left">
+                                           <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Names="Gotham Book">Line of Business:</asp:Label>
+                                       </td>
+                                       <td align="left">
+                                            <asp:DropDownList ID="ddlPolicyClass" runat="server" 
+                                            CssClass="form-controlWhite" Width="350px" Height="31px" AutoPostBack="True" EnableViewState="true" 
+                                            onselectedindexchanged="ddlPolicyClass_SelectedIndexChanged"></asp:DropDownList>
+                                           &nbsp;
+                                       </td>
+                                   </tr>
                                    <tr>
                                        <td align="left">
                                            <asp:Label ID="Label23" runat="server" Font-Bold="True" Font-Names="Gotham Book">Description:</asp:Label>

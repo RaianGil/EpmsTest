@@ -46,7 +46,7 @@ namespace EPolicy.TaskControl
         private int _mode = (int)TaskControlMode.CLEAR;
         private DataTable _BondsCollection = null;
         private DataTable _BondsReqDocCollection = null;
-        private DataTable _dtBonds = null;
+        private DataTable _dtBond = null;
         private TaskControl _oldPolices = null;
 
         private int _TypeOfBond = 0;
@@ -59,7 +59,7 @@ namespace EPolicy.TaskControl
         private string _AccountNumber = "";
         private string _NombreEstacion = "";
         private string _CantidadPrestadaSolicitante = "";
-        private string _RenewalOfBnd = "";
+        private string _RenewalOfBond = "";
         private string _Signature = "";
         private double _PaymentAmount = 0.0;
 
@@ -220,11 +220,11 @@ namespace EPolicy.TaskControl
         {
             get
             {
-                return this._RenewalOfBnd;
+                return this._RenewalOfBond;
             }
             set
             {
-                this._RenewalOfBnd = value;
+                this._RenewalOfBond = value;
             }
         }
 
@@ -503,7 +503,7 @@ namespace EPolicy.TaskControl
             else
                 Bnd = (Bonds)Policy.GetPolicyByTaskControlID(TaskControlID, Bnd);  //Policy
 
-            Bnd._dtBonds = dt;
+            Bnd._dtBond = dt;
 
             Bnd = FillProperties(Bnd, TaskControlID, isQuote);
 
@@ -543,26 +543,26 @@ namespace EPolicy.TaskControl
         {
             try
             {
-                bnd.TaskControlID = int.Parse(bnd._dtBonds.Rows[0]["TaskControlID"].ToString());
-                bnd.TypeOfBond = int.Parse(bnd._dtBonds.Rows[0]["TypeOfBondID"].ToString());
-                bnd.BondRequiredDocuments = bnd._dtBonds.Rows[0]["RequiredDocuments"].ToString();
-                bnd.BondDescription = bnd._dtBonds.Rows[0]["DescriptionOfBond"].ToString();
-                bnd.Limits = bnd._dtBonds.Rows[0]["Limits"].ToString();
-                bnd.Obligee = bnd._dtBonds.Rows[0]["Obligee"].ToString();
-                bnd.CompanyName = bnd._dtBonds.Rows[0]["CompanyName"].ToString();
-                bnd.CustomerType = int.Parse(bnd._dtBonds.Rows[0]["CustomerType"].ToString());
-                bnd.AccountNumber = bnd._dtBonds.Rows[0]["AccNumber"].ToString();
-                bnd.NombreEstacion = bnd._dtBonds.Rows[0]["NombreEstacion"].ToString();
-                bnd.CantidadPrestadaSolicitante = bnd._dtBonds.Rows[0]["CantidadPrestadaSolicitante"].ToString();
-                bnd.RenewalOfBnd = bnd._dtBonds.Rows[0]["RenewalOfBnd"].ToString();
-                bnd.Signature = bnd._dtBonds.Rows[0]["Signature"].ToString();
-                if (bnd._dtBonds.Rows[0]["PaymentAmount"].ToString() == "")
+                bnd.TaskControlID = int.Parse(bnd._dtBond.Rows[0]["TaskControlID"].ToString());
+                bnd.TypeOfBond = int.Parse(bnd._dtBond.Rows[0]["TypeOfBondID"].ToString());
+                bnd.BondRequiredDocuments = bnd._dtBond.Rows[0]["RequiredDocuments"].ToString();
+                bnd.BondDescription = bnd._dtBond.Rows[0]["DescriptionOfBond"].ToString();
+                bnd.Limits = bnd._dtBond.Rows[0]["Limits"].ToString();
+                bnd.Obligee = bnd._dtBond.Rows[0]["Obligee"].ToString();
+                bnd.CompanyName = bnd._dtBond.Rows[0]["CompanyName"].ToString();
+                bnd.CustomerType = int.Parse(bnd._dtBond.Rows[0]["CustomerType"].ToString());
+                bnd.AccountNumber = bnd._dtBond.Rows[0]["AccNumber"].ToString();
+                bnd.NombreEstacion = bnd._dtBond.Rows[0]["NombreEstacion"].ToString();
+                bnd.CantidadPrestadaSolicitante = bnd._dtBond.Rows[0]["CantidadPrestadaSolicitante"].ToString();
+                bnd.RenewalOfBnd = bnd._dtBond.Rows[0]["RenewalOfBnd"].ToString();
+                bnd.Signature = bnd._dtBond.Rows[0]["Signature"].ToString();
+                if (bnd._dtBond.Rows[0]["PaymentAmount"].ToString() == "")
                 {
                     bnd.PaymentAmount = 0.0;
                 }
                 else
                 {
-                    bnd.PaymentAmount = double.Parse(bnd._dtBonds.Rows[0]["PaymentAmount"].ToString());
+                    bnd.PaymentAmount = double.Parse(bnd._dtBond.Rows[0]["PaymentAmount"].ToString());
                 }
                 bnd._BondsReqDocCollection = GetReqDocumentsByTaskControlID(taskControlID, isQuote);
 

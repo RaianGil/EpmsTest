@@ -1272,3 +1272,1220 @@ Source: mscorlib
 TargetSite: Void AbortInternal()
 -----------------------------------------------------------
 
+Time: 08/02/2021 11:41:47 AM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_1mdrkxu4
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 08/02/2021 11:44:22 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 01/03/2021 11:00:27 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 01/03/2021 11:09:12 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:16:57 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:17:08 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:29:15 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:30:01 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:30:18 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:49:01 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:49:06 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:51:14 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:51:58 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:52:34 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:54:08 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:56:25 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 01:58:01 PM
+-----------------------------------------------------------
+Message: There is no row at position 0.
+StackTrace:    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at EPolicy.TaskControl.TaskControl.GetTaskControlByTaskControlID(Int32 TaskControlID, Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\TaskControl.cs:line 407
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 328
+Source: System.Data
+TargetSite: NodePath GetNodeByIndex(Int32)
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:01:53 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.TaskControl.RES.GetInsertRESQuoteXml() in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 611
+   at EPolicy.TaskControl.RES.SaveRESQuoteDB(Int32 UserID, Int32 taskControlID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 597
+   at EPolicy.TaskControl.RES.SaveRES(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 352
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 324
+Source: TaskControl
+TargetSite: System.Xml.XmlDocument GetInsertRESQuoteXml()
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:14:28 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.TaskControl.RES.GetInsertRESQuoteXml() in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 617
+   at EPolicy.TaskControl.RES.SaveRESQuoteDB(Int32 UserID, Int32 taskControlID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 603
+   at EPolicy.TaskControl.RES.SaveRES(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 352
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 324
+Source: TaskControl
+TargetSite: System.Xml.XmlDocument GetInsertRESQuoteXml()
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:15:03 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.TaskControl.RES.GetInsertRESQuoteXml() in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 617
+   at EPolicy.TaskControl.RES.SaveRESQuoteDB(Int32 UserID, Int32 taskControlID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 603
+   at EPolicy.TaskControl.RES.SaveRES(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 352
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 324
+Source: TaskControl
+TargetSite: System.Xml.XmlDocument GetInsertRESQuoteXml()
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:15:33 PM
+-----------------------------------------------------------
+Message: Object reference not set to an instance of an object.
+StackTrace:    at EPolicy.TaskControl.RES.GetInsertRESQuoteXml() in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 617
+   at EPolicy.TaskControl.RES.SaveRESQuoteDB(Int32 UserID, Int32 taskControlID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 603
+   at EPolicy.TaskControl.RES.SaveRES(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 352
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 324
+Source: TaskControl
+TargetSite: System.Xml.XmlDocument GetInsertRESQuoteXml()
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:16:51 PM
+-----------------------------------------------------------
+Message: Database command could not be executed
+StackTrace:    at Baldrich.DBRequest.DBRequest.Insert(String spName, XmlDocument xmlString)
+   at EPolicy.TaskControl.RES.SaveRESQuoteDB(Int32 UserID, Int32 taskControlID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 603
+   at EPolicy.TaskControl.RES.SaveRES(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 352
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 324
+Source: DBRequest
+TargetSite: Int32 Insert(System.String, System.Xml.XmlDocument)
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:17:31 PM
+-----------------------------------------------------------
+Message: Database command could not be executed
+StackTrace:    at Baldrich.DBRequest.DBRequest.Insert(String spName, XmlDocument xmlString)
+   at EPolicy.TaskControl.RES.SaveRESQuoteDB(Int32 UserID, Int32 taskControlID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 603
+   at EPolicy.TaskControl.RES.SaveRES(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 352
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 324
+Source: DBRequest
+TargetSite: Int32 Insert(System.String, System.Xml.XmlDocument)
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:18:21 PM
+-----------------------------------------------------------
+Message: Database command could not be executed
+StackTrace:    at Baldrich.DBRequest.DBRequest.Insert(String spName, XmlDocument xmlString)
+   at EPolicy.TaskControl.RES.SaveRESQuoteDB(Int32 UserID, Int32 taskControlID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 603
+   at EPolicy.TaskControl.RES.SaveRES(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\RES.cs:line 352
+   at EPolicy.RES.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 324
+Source: DBRequest
+TargetSite: Int32 Insert(System.String, System.Xml.XmlDocument)
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:37:37 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 478
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 01/03/2021 02:54:28 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 478
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 01/03/2021 05:57:25 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 480
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 08:15:15 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 480
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 08:20:42 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 480
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 08:41:33 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 481
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 09:06:55 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 481
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 09:15:44 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 481
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 09:23:19 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 481
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 09:39:35 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 481
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 09:41:17 AM
+-----------------------------------------------------------
+Message: The Physical City is missing or wrong.
+ The Physical Zipcode is missing or wrong.
+ Physical Address is missing.
+ 
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_3nxs01fz
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 02/03/2021 09:43:36 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 02/03/2021 09:48:09 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 481
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 03/03/2021 10:26:10 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 479
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 03/03/2021 10:51:01 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 479
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 08:55:13 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 485
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 09:08:05 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 485
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 09:30:21 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 486
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 09:40:53 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 486
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 09:53:18 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 486
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 09:56:11 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 486
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 11:21:21 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 486
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/03/2021 11:55:18 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 486
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 08/03/2021 12:26:30 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e)
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 09:30:46 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 492
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 11:16:22 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 11:20:31 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 11:24:20 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 11:35:46 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 11:35:53 AM
+-----------------------------------------------------------
+Message: Choose an Type of Bond to continue.
+ 
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_1oybxwps
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 10/03/2021 11:36:04 AM
+-----------------------------------------------------------
+Message: Agent missing or wrong.
+StackTrace:    at EPolicy.TaskControl.Policy.ValidatePolicy() in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\Policy.cs:line 2208
+   at EPolicy.TaskControl.Bonds.SaveBonds(Int32 UserID) in C:\inetpub\wwwroot\EpmsTest\Classes\Guardian_ePMS\TaskControl\Bonds.cs:line 346
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1410
+Source: TaskControl
+TargetSite: Void ValidatePolicy()
+-----------------------------------------------------------
+
+Time: 10/03/2021 11:44:11 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 12:14:06 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 12:42:57 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 03:11:05 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 03:15:22 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 03:42:21 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:02:30 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:08:32 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:13:31 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:17:55 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:24:34 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:26:00 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:50:07 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 04:58:30 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 10/03/2021 05:05:26 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 493
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 18/03/2021 10:21:20 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 496
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 18/03/2021 10:30:35 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 496
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 18/03/2021 01:23:22 PM
+-----------------------------------------------------------
+Message: You must select a $25,000.00 or $50,000.00 penalty for this obligee.
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_h1cdut4j
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 18/03/2021 01:23:49 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 19/03/2021 10:52:05 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 500
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 22/03/2021 11:03:59 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 22/03/2021 11:10:41 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 500
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 22/03/2021 11:24:04 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 500
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 22/03/2021 11:53:43 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 22/03/2021 11:53:51 AM
+-----------------------------------------------------------
+Message: Choose an Type of Bond to continue.
+ 
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_lwr2fzx5
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 23/03/2021 09:26:34 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 500
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 23/03/2021 02:44:53 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 500
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/03/2021 10:09:33 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 500
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/03/2021 12:34:42 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 501
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/03/2021 12:40:30 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 501
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/03/2021 01:07:54 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 501
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 29/03/2021 01:32:39 PM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e)
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 05/05/2021 10:44:11 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 06/05/2021 02:30:54 PM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_0abdqqtm
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 06/05/2021 02:34:53 PM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_0abdqqtm
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 17/05/2021 09:44:25 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 17/05/2021 09:56:07 AM
+-----------------------------------------------------------
+Message: You must select a total premium amount
+StackTrace:    at EPolicy.Bonds.ValidateFields() in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1869
+   at EPolicy.Bonds.BtnSave_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1403
+Source: App_Web_ikfq5weg
+TargetSite: Void ValidateFields()
+-----------------------------------------------------------
+
+Time: 17/05/2021 09:56:21 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.Bonds.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\Bonds.aspx.cs:line 1589
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+
+Time: 17/05/2021 11:06:39 AM
+-----------------------------------------------------------
+Message: Thread was being aborted.
+StackTrace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at EPolicy.RES.btnAcceptQuote_Click(Object sender, EventArgs e) in c:\inetpub\wwwroot\EpmsTest\RES.aspx.cs:line 510
+Source: mscorlib
+TargetSite: Void AbortInternal()
+-----------------------------------------------------------
+

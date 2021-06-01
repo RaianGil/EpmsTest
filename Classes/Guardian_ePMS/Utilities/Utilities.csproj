@@ -109,7 +109,9 @@
     <Compile Include="DefaultEnterControl.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RES\convert_bool_int.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

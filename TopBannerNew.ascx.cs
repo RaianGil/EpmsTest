@@ -185,7 +185,10 @@ namespace EPolicy
                         rtValue += @"<li><a href=""RedirectByMenu.aspx?page=HomeOwners"">New Quote</a></li>";
                         rtValue += @"<li><a href=""RedirectByMenu.aspx?page=Renewal from PPS HomeOwners"">Renewals</a></li>";
                     rtValue += @"</ul>";
-                if (cp.IsInRole("BONDS") || cp.IsInRole("ADMINISTRATOR") || cp.IsInRole("BONDSVI"))
+                if (cp.IsInRole("RES") || cp.IsInRole("ADMINISTRATOR") || cp.IsInRole("RESVI"))
+                    rtValue += @"<li><a href=""RedirectByMenu.aspx?page=RES"">RES</a></li>";
+
+                if (cp.IsInRole("BONDS") || cp.IsInRole("ADMINISTRATOR") || cp.IsInRole("BONDVI"))
                     rtValue += @"<li><a href=""RedirectByMenu.aspx?page=Bonds"">Bonds</a></li>";
 
                 if (cp.IsInRole("YACHT") || cp.IsInRole("ADMINISTRATOR"))

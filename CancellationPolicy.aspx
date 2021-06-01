@@ -374,6 +374,17 @@
                            </div>
                            <div class="">
                                <table class="MainMenu" style="width: 78%; margin-right: 0px; height: 276px;">
+                                    <tr>
+                                       <td align="left" style="display:none">
+                                           <asp:Label ID="Label10" runat="server" Font-Bold="True" Font-Names="Gotham Book" visible="False">Type of Business:</asp:Label>
+                                       </td>
+                                       <td align="left" style="display:none">
+                                                <asp:DropDownList ID="ddlPolicyClass" runat="server" 
+                                                    CssClass="form-controlWhite" Width="350px" Height="31px" AutoPostBack="True" EnableViewState="true" visible="False"
+                                                    onselectedindexchanged="ddlTransaction_SelectedIndexChanged"></asp:DropDownList>
+                                           &nbsp;
+                                       </td>
+                                   </tr>
                                    <tr>
                                        <td align="left">
                                            <asp:Label ID="Label36" runat="server" Font-Bold="True" Font-Names="Gotham Book">Description:</asp:Label>

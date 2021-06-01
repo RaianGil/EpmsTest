@@ -130,6 +130,10 @@ namespace EPolicy
                     {
                         ddlNewApplication.Items.RemoveAt(ddlNewApplication.Items.IndexOf(ddlNewApplication.Items.FindByText("NEW BOND")));
                     }
+                    if (!cp.IsInRole("RES"))
+                    {
+                        ddlNewApplication.Items.RemoveAt(ddlNewApplication.Items.IndexOf(ddlNewApplication.Items.FindByText("NEW RES")));
+                    }
                     if (!cp.IsInRole("YACHT"))
                     {
                         ddlNewApplication.Items.RemoveAt(ddlNewApplication.Items.IndexOf(ddlNewApplication.Items.FindByText("NEW ")));
@@ -184,6 +188,7 @@ namespace EPolicy
                         DataTable dtLocation = LookupTables.LookupTables.GetTable("Location");
                         DataTable dtRelatedTo = LookupTables.LookupTables.GetTable("RelatedTo");
                         DataTable dtGender = LookupTables.LookupTables.GetTable("Gender");
+                        DataTable dtPolicyClass = EPolicy.LookupTables.LookupTables.GetTable("PolicyClass");
 
                         //MaritalStatus
                         ddlMaritalStatus.DataSource = dtMaritalStatus;
@@ -192,6 +197,15 @@ namespace EPolicy
                         ddlMaritalStatus.DataBind();
                         ddlMaritalStatus.SelectedIndex = -1;
                         ddlMaritalStatus.Items.Insert(0, "");
+
+
+                        //PolicyClass
+                        ddlPolicyClass.DataSource = dtPolicyClass;
+                        ddlPolicyClass.DataTextField = "PolicyClassDesc";
+                        ddlPolicyClass.DataValueField = "PolicyClassID";
+                        ddlPolicyClass.DataBind();
+                        ddlPolicyClass.SelectedIndex = -1;
+                        ddlPolicyClass.Items.Insert(0, "");
 
                         //Occupations
                         ddlOccupation.DataSource = dtOccupations;
@@ -1751,6 +1765,57 @@ namespace EPolicy
             Response.Redirect("Bonds.aspx");
         }
 
+        private void NewRES()
+        {
+            Customer.Customer customer = (Customer.Customer)Session["Customer"];
+            Session.Clear();
+            TaskControl.RES taskControl = new TaskControl.RES(true);
+            taskControl.Mode = 1; //ADD
+            //taskControl.isQuote = true;
+
+            //taskControl.Customer.MaritalStatus = ddlMaritalStatus.Items.IndexOf(ddlMaritalStatus.Items.FindByText(ddlMaritalStatus.SelectedItem.Text.ToString()));
+            taskControl.Customer.Sex = ddlGender.SelectedItem.Text.ToString();
+            taskControl.Customer.Birthday = txtBirthdate.Text.ToString().Trim();
+            taskControl.Customer.FirstName = TxtFirstName.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.Initial = TxtInitial.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.LastName1 = txtLastname1.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.LastName2 = txtLastname2.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.Email = txtEmail.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.JobPhone = txtWorkPhone.Text.ToString().Trim();
+            taskControl.Customer.Cellular = TxtCellular.Text.ToString().Trim();
+            taskControl.Customer.HomePhone = txtHomePhone.Text.ToString().Trim();
+            taskControl.Customer.Licence = TxtLicence.Text.ToString().Trim();
+
+            taskControl.Customer.Address1 = txtHomeUrb1.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.Address2 = txtAddress1.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.City = txtCity.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.State = txtState.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.ZipCode = txtZipCode.Text.ToString().Trim().ToUpper();
+
+            taskControl.Customer.AddressPhysical1 = txtAddress1Phys.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.AddressPhysical2 = txtAddress2Phys.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.CityPhysical = txtCityPhys.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.StatePhysical = txtStatePhys.Text.ToString().Trim().ToUpper();
+            taskControl.Customer.ZipPhysical = txtZipCodePhys.Text.ToString().Trim().ToUpper();
+
+            taskControl.Customer.CustomerNo = lblCustNumber.Text.ToString().Trim().ToUpper();
+
+            taskControl.Prospect.ProspectID = int.Parse(LblProspectID.Text.Replace("Prospect: ", ""));
+
+            taskControl.Prospect.FirstName = TxtFirstName.Text.ToString().Trim().ToUpper();
+            taskControl.Prospect.LastName1 = txtLastname1.Text.ToString().Trim().ToUpper();
+            taskControl.Prospect.LastName2 = txtLastname2.Text.ToString().Trim().ToUpper();
+            taskControl.Prospect.HomePhone = txtHomePhone.Text.ToString().Trim().ToUpper();
+            taskControl.Prospect.WorkPhone = txtWorkPhone.Text.ToString().Trim().ToUpper();
+            taskControl.Prospect.Cellular = TxtCellular.Text.ToString().Trim().ToUpper();
+            taskControl.Prospect.Email = txtEmail.Text.ToString().Trim().ToUpper();
+
+            taskControl.TaskControlTypeID = int.Parse(LookupTables.LookupTables.GetID("TaskControlType", "RES Quote"));
+            Session.Add("TaskControl", taskControl);
+            Session.Add("Customer", taskControl.Customer);
+            Response.Redirect("RES.aspx");
+        }
+
         private void NewYacht()
         {
             Customer.Customer customer = (Customer.Customer)Session["Customer"];
@@ -2072,6 +2137,10 @@ namespace EPolicy
                 {
                     NewBond();
                 }
+                else if (ddlNewApplication.SelectedItem.Text == "NEW RES")
+                {
+                    NewRES();
+                }
                 else if (ddlNewApplication.SelectedItem.Text == "NEW YACHT")
                 {
                     NewYacht();
@@ -2141,8 +2210,13 @@ namespace EPolicy
             {
                 return;
             }
-            DtCert = GetCustomerCommentsByCustomerNo(int.Parse(lblCustNumber.Text.ToString()));
-
+            if (ddlPolicyClass.SelectedIndex == 0)
+                DtCert = GetCustomerCommentsByCustomerNo(int.Parse(lblCustNumber.Text.ToString()));
+            else
+            {
+                int PolicyClassID = int.Parse(ddlPolicyClass.SelectedItem.Value);
+                DtCert = GetCustomerCommentsByCustomerNo1(int.Parse(lblCustNumber.Text.ToString()), PolicyClassID);
+            }
             if (DtCert != null)
             {
                 if (DtCert.Rows.Count != 0)
@@ -2349,6 +2423,43 @@ namespace EPolicy
             }
         }
 
+        private DataTable GetCustomerCommentsByCustomerNo1(int CustomerNo, int PolicyClassID)
+        {
+            try
+            {
+                DbRequestXmlCookRequestItem[] cookItems = new DbRequestXmlCookRequestItem[2];
+                DbRequestXmlCooker.AttachCookItem("CustomerNo", SqlDbType.Int, 0, CustomerNo.ToString(), ref cookItems);
+                DbRequestXmlCooker.AttachCookItem("PolicyClassID", SqlDbType.Int, 0, PolicyClassID.ToString(), ref cookItems);
+
+                Baldrich.DBRequest.DBRequest exec = new Baldrich.DBRequest.DBRequest();
+                XmlDocument xmlDoc;
+
+                try
+                {
+                    xmlDoc = DbRequestXmlCooker.Cook(cookItems);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Could not cook items.", ex);
+                }
+                DataTable dt = null;
+                try
+                {
+                    dt = exec.GetQuery("GetCustomerCommentsByCustomerNo", xmlDoc);
+                    return dt;
+                }
+                catch (Exception ex)
+                {
+                    //throw new Exception("There is no information to display, please try again.", ex);
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         private void SaveComments() 
         {
             try
@@ -2754,7 +2865,7 @@ namespace EPolicy
                 }
 
                 //SaveDocuments
-                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim());
+                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim(), "0");
 
                 //Upload Document
                 if (FileUpload1.PostedFile.FileName != null)
@@ -2814,10 +2925,15 @@ namespace EPolicy
             gvAdjuntar.DataSource = null;
             DataTable DtCert = null;
             DataTable dtTransaction = null;
+            int intPolicyClassID = 0;
+
+            if (ddlPolicyClass.SelectedIndex != 0)
+                intPolicyClassID = int.Parse(ddlPolicyClass.SelectedItem.Value);
+
 
             if (customer.CustomerNo != "")
             {
-                DtCert = EPolicy.Customer.Customer.GetDocumentsByCustomerNo(customer.CustomerNo, 0, 0);
+                DtCert = EPolicy.Customer.Customer.GetDocumentsByCustomerNo1(customer.CustomerNo, 0, 0, intPolicyClassID);
                 dtTransaction = TaskControl.TaskControl.GetTaskControlByCustomerNo(customer.CustomerNo, userID);
             }
 
@@ -2969,6 +3085,10 @@ namespace EPolicy
         protected void ddlTransaction_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             //Session["Transaction"] = ddlTransaction.SelectedIndex;
+            mpeAdjunto.Show();
+        }
+        protected void ddlPolicyClass_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
             mpeAdjunto.Show();
         }
 

@@ -208,6 +208,16 @@ namespace EPolicy
                     Response.Redirect("Bonds.aspx");
                     break;
 
+                case "RES":
+                    Session.Clear();
+                    TaskControl.RES RES = new TaskControl.RES(true);
+                    RES.Mode = 1; //ADD
+                    RES.TaskControlTypeID = int.Parse(LookupTables.LookupTables.GetID("TaskControlType", "RES Quote"));
+                    Session.Add("TaskControl", RES);
+                    Response.Redirect("RES.aspx");
+                    break;
+   
+
                 case "Yacht":
                     Session.Clear();
                     TaskControl.Yacht Yat = new TaskControl.Yacht(true);

@@ -274,11 +274,14 @@ namespace EPolicy
 
         protected void FillLookupTables()
         {
+            EPolicy.TaskControl.HomeOwners taskControl = (EPolicy.TaskControl.HomeOwners)Session["TaskControl"];
+
             System.Data.DataTable dtAgent = GetAgency();
             System.Data.DataTable dtLocation = EPolicy.LookupTables.LookupTables.GetTable("Location");
             System.Data.DataTable dtVehicleTerritory = EPolicy.LookupTables.LookupTables.GetTable("VI_VehicleTerritory");
             System.Data.DataTable dtBankList = EPolicy.LookupTables.LookupTables.GetTable("Bank_VI");
             System.Data.DataTable dtDiscountsHomeOwners = EPolicy.LookupTables.LookupTables.GetTable("DiscountsHomeOwners");
+            System.Data.DataTable dtPolicyClass = EPolicy.LookupTables.LookupTables.GetTable("PolicyClass");
 
             System.Data.DataTable dtTypeOfInsured = EPolicy.LookupTables.LookupTables.GetTable("TypeOfInsured");
             //VehicleTerritory
@@ -345,10 +348,15 @@ namespace EPolicy
             ddlBankList2.SelectedIndex = -1;
             ddlBankList2.Items.Insert(0, "");
 
+            //PolicyClass
+            ddlPolicyClass.DataSource = dtPolicyClass;
+            ddlPolicyClass.DataTextField = "PolicyClassDesc";
+            ddlPolicyClass.DataValueField = "PolicyClassID";
+            ddlPolicyClass.DataBind();
+            ddlPolicyClass.SelectedValue = taskControl.PolicyClassID.ToString();
+            ddlPolicyClass.Items.Insert(0, "");
 
-            
-
-                 //BANK_VI 2
+            //BANK_VI 2
             ddlDiscount.DataSource = dtDiscountsHomeOwners;
             ddlDiscount.DataTextField = "DiscountsHomeOwnersDesc";
             ddlDiscount.DataValueField = "DiscountsHomeOwnersID";
@@ -6648,7 +6656,7 @@ namespace EPolicy
                 }
 
                 //SaveDocuments
-                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim());
+                int docid = EPolicy.Customer.Customer.Savedocuments(customer.CustomerNo.ToString(), txtDocumentDesc.Text.Trim(), ddlTransaction.SelectedItem.Value.Trim(), taskControl.TaskControlTypeID.ToString());
 
                 //Upload Document
                 if (FileUpload1.PostedFile.FileName != null)

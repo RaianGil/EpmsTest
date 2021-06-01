@@ -184,45 +184,45 @@
        function fnAllowNumeric(anytxt) {
 
            var num = document.getElementById(anytxt).value;
-//           if (num == "") {
-//               if ((event.keyCode < 48 || event.keyCode > 57) && event.keyCode != 189) {
-//                   if (event.keyCode != 9) {
-//                       event.preventDefault();
-//                   }
-//               }
-//           } else {
-               if (event.keyCode >= 96 && event.keyCode <= 105) {
-                   return true;
-               }
-               else if (event.keyCode >= 48 && event.keyCode <= 57) {
-                   return true;
-               }
-               else if (event.keyCode == 8 || event.keyCode == 9) {
-                   document.getElementById(anytxt).focus();
-                   return true;
-               }
-               else {
-                   event.preventDefault();
-
-               }
-
-               //               if ((event.keyCode < 96 || event.keyCode > 105) && event.keyCode != 8) {
-               //                   if (event.keyCode != 9) {
-               //                       if ((event.keyCode >= 48 && event.keyCode <= 57) && event.keyCode != 8) {
-               //                           return true;
-               //                       }
-               //                       else {
-               //                           event.preventDefault();
-               //                       }
-               //                   }
-               //               }
-
-               //               if ((event.keyCode < 96 || event.keyCode > 105) && event.keyCode != 8) {
-               //                   if (event.keyCode != 9) {
-               //                       event.preventDefault();
-               //                   }
-               //               }
+           //           if (num == "") {
+           //               if ((event.keyCode < 48 || event.keyCode > 57) && event.keyCode != 189) {
+           //                   if (event.keyCode != 9) {
+           //                       event.preventDefault();
+           //                   }
+           //               }
+           //           } else {
+           if (event.keyCode >= 96 && event.keyCode <= 105) {
+               return true;
            }
+           else if (event.keyCode >= 48 && event.keyCode <= 57) {
+               return true;
+           }
+           else if (event.keyCode == 8 || event.keyCode == 9) {
+               document.getElementById(anytxt).focus();
+               return true;
+           }
+           else {
+               event.preventDefault();
+
+           }
+
+           //               if ((event.keyCode < 96 || event.keyCode > 105) && event.keyCode != 8) {
+           //                   if (event.keyCode != 9) {
+           //                       if ((event.keyCode >= 48 && event.keyCode <= 57) && event.keyCode != 8) {
+           //                           return true;
+           //                       }
+           //                       else {
+           //                           event.preventDefault();
+           //                       }
+           //                   }
+           //               }
+
+           //               if ((event.keyCode < 96 || event.keyCode > 105) && event.keyCode != 8) {
+           //                   if (event.keyCode != 9) {
+           //                       event.preventDefault();
+           //                   }
+           //               }
+       }
  
 </script>
 
@@ -1062,6 +1062,17 @@
                            </div>
                            <div class="">
                                <table class="MainMenu" style="width: 78%; margin-right: 0px; height: 276px;">
+                                    <tr>
+                                       <td align="left">
+                                           <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Gotham Book">Type of Business:</asp:Label>
+                                       </td>
+                                       <td align="left">
+                                                <asp:DropDownList ID="ddlPolicyClass" runat="server" 
+                                                    CssClass="form-controlWhite" Width="350px" Height="31px" AutoPostBack="True" EnableViewState="true" 
+                                                    onselectedindexchanged="ddlPolicyClass_SelectedIndexChanged"></asp:DropDownList>
+                                           &nbsp;
+                                       </td>
+                                   </tr>
                                    <tr>
                                        <td align="left">
                                            <asp:Label ID="Label36" runat="server" Font-Bold="True" Font-Names="Gotham Book">Description:</asp:Label>

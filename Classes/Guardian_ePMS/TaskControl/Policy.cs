@@ -1293,7 +1293,7 @@ namespace EPolicy.TaskControl
 		{
             if (PolicyClassID != 25)
             {
-                if (PolicyClassID != 3 && PolicyClassID != 21 && PolicyClassID != 23 && PolicyClassID != 26 && PolicyClassID != 27)  // No aplica para Auto Privado
+                if (PolicyClassID != 3 && PolicyClassID != 21 && PolicyClassID != 23 && PolicyClassID != 26 && PolicyClassID != 27 && PolicyClassID != 29)  // No aplica para Auto Privado
                 {
                     if (this.SupplierID.Trim() != "000")
                         SaveSupplier();
@@ -4700,6 +4700,52 @@ namespace EPolicy.TaskControl
                     }
                     break;
 
+                    case 29:          //RES
+                    if (this.AutoAssignPolicy) //Número de Poliza asignado automaticamente.
+                    {
+
+                        if (this.PolicyClassID == 29)
+                        {
+                            this.PolicyType = "RES";
+                        }
+                        dtPolicyNo = Executor.GetQuery("GetPolicyCounterByParameter", this.GetPolicyCounterXml());
+                        if (dtPolicyNo.Rows.Count != 0)
+                        {
+                            for (int i = 0; dtPolicyNo.Rows.Count >= i; i++)
+                            {
+                                if ((int)dtPolicyNo.Rows[i]["PolicyEnd"] > (int)dtPolicyNo.Rows[i]["PolicyLast"])
+                                {
+                                    int PolNo = ((int)dtPolicyNo.Rows[i]["PolicyLast"]) + 1;
+                                    this.PolicyNo = PolNo.ToString();
+                                    this._PolicyCounterID = (int)dtPolicyNo.Rows[i]["PolicyCounterID"];
+                                    policyCounterID = this._PolicyCounterID;
+                                    i = dtPolicyNo.Rows.Count;
+                                }
+                                else
+                                {
+                                    throw new Exception("Must assign a new pool number for RES Policy.");
+                                }
+                            }
+
+                            if (this._PolicyCounterID != 0)
+                            {                                                    //Actualiza la tabla de numero de polizas (Counters).
+                                Executor.BeginTrans();
+                                Executor.Update("UpdatePolicyCounterByPolicyCounterID", this.UpdatePolicyCounterByPolicyCounterIDXml());
+                                Executor.CommitTrans();
+
+                                this.PolicyNo = this.PolicyNo.Trim().PadLeft(7, '0');
+                            }
+                            else
+                            {
+                                throw new Exception("Error in assign policy number");
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("Sorry, Policy counter not found, Please verify.");
+                        }
+                    }
+                    break;
 
 				default:
 					break;
